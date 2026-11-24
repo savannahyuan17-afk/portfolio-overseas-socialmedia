@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Watrix Worldline × 海外冷启动方案 | 丁洁媛</title>
+<style>
+  :root{
+    --bg:#FAF6F3; --ink:#2B2730; --muted:#6E6873; --card:#FFFFFF;
+    --rose:#D98E8E; --rose-deep:#C47777; --cream:#F3E3DC; --sage:#7C9A8E;
+    --line:#EADFD8; --gold:#C9A227;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+  h1,h2,h3,.serif{font-family:Georgia,"Songti SC","STSong",serif}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  section{padding:56px 0;border-bottom:1px solid var(--line)}
+  .kicker{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--rose-deep);font-weight:600;margin-bottom:8px}
+  h2{font-size:28px;margin-bottom:8px}
+  h3{font-size:17px;margin-bottom:10px}
+  .sub{color:var(--muted);font-size:15px;margin-bottom:30px;max-width:680px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:0 2px 10px rgba(43,39,48,.04)}
+  .badge{display:inline-block;background:var(--cream);color:var(--rose-deep);border-radius:999px;padding:3px 12px;font-size:12px;font-weight:600;margin:0 6px 6px 0}
+  .badge.dark{background:var(--ink);color:#fff}
+  .badge.sage{background:#E4EDE8;color:var(--sage)}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th{background:var(--cream);color:var(--ink);text-align:left;padding:9px 12px;font-weight:600}
+  td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  td.num-cell,th.num-cell{font-variant-numeric:tabular-nums}
+  .small{font-size:12.5px;color:var(--muted)}
+  .tagline{font-style:italic;color:var(--sage)}
+  .warn{background:#FFF8E6;border:1px solid #EBD9A8;border-radius:12px;padding:14px 20px;font-size:13.5px;color:#7A6420}
+  .src{background:#F4F0FA;border:1px solid #DCD2EC;border-radius:12px;padding:14px 20px;font-size:12.5px;color:#4E4363}
+  .src a{color:#4E4363}
+  .hero{background:linear-gradient(160deg,#EAF0EC 0%,#FAF6F3 55%,#F6E9E4 100%);padding:76px 0 52px;text-align:center}
+  .hero h1{font-size:38px;letter-spacing:.02em;margin-bottom:6px}
+  .hero .en{letter-spacing:.3em;text-transform:uppercase;font-size:13px;color:var(--muted);margin-bottom:12px}
+  .hero p{color:var(--muted);max-width:640px;margin:0 auto 18px}
+  .btn{display:inline-block;background:var(--ink);color:#fff;border-radius:999px;padding:11px 26px;font-size:14px;text-decoration:none;margin:4px 5px}
+  .btn.ghost{background:transparent;border:1.5px solid var(--ink);color:var(--ink)}
+  .btn.sage{background:var(--sage);color:#fff}
+  .kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .kpi .step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 10px;text-align:center}
+  .kpi .step .n{font-family:"Segoe UI",sans-serif;font-size:22px;color:var(--sage);font-weight:600}
+  .comp{border-top:3px solid var(--sage)}
+  .comp .kpirow{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+  .comp .kpirow span{background:var(--cream);border-radius:8px;padding:4px 10px;font-size:12.5px}
+  .comp .kpirow span b{color:var(--rose-deep)}
+  .attrib{font-size:12px;color:var(--sage);font-weight:600;margin-top:8px}
+  .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
+  .d-full{background:var(--sage)} .d-half{background:var(--rose)} .d-none{background:#E8E0D8}
+  .post{border:1px solid var(--line);border-radius:14px;background:#fff;overflow:hidden}
+  .post .phead{display:flex;align-items:center;gap:10px;padding:12px 18px;border-bottom:1px solid var(--line);background:var(--cream)}
+  .post .phead .plat{font-weight:700;font-size:13px;letter-spacing:.06em}
+  .post .phead .fmt{margin-left:auto;font-size:12px;color:var(--muted)}
+  .post .pbody{padding:16px 18px;font-size:14px}
+  .post .pbody .en-copy{font-family:Georgia,"Times New Roman",serif;color:#3A3540;font-size:14.5px}
+  .post .pbody .lbl{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--sage);margin:10px 0 4px;text-transform:uppercase}
+  .post .why{font-size:12.5px;color:var(--muted);border-top:1px dashed var(--line);margin-top:12px;padding-top:10px}
+  .post .why b{color:var(--sage)}
+  .script{width:100%;font-size:13px}
+  .script th{font-size:12px}
+  .script td.t{white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--rose-deep);font-weight:600}
+  .cal th,.cal td{font-size:12.5px;padding:8px 10px}
+  .cal .day{white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:600}
+  .wtag{display:inline-block;background:var(--ink);color:#fff;border-radius:999px;padding:2px 12px;font-size:12px;font-weight:600;margin:18px 0 10px}
+  .wtag.w2{background:var(--sage)} .wtag.w3{background:var(--rose-deep)} .wtag.w4{background:var(--gold)}
+  .ex-tag{display:inline-block;background:#F0E6D2;border:1px solid #D9C49A;color:#7A6420;border-radius:6px;padding:1px 8px;font-size:11px;font-weight:600;margin-left:8px;vertical-align:middle}
+  footer{text-align:center;padding:40px 0;color:var(--muted);font-size:13px}
+  @media(max-width:820px){.grid2,.grid3,.kpi{grid-template-columns:1fr}}
+  @media print{section{padding:26px 0}}
+</style>
+</head>
+<body>
+
+<!-- 01 COVER -->
+<header class="hero">
+  <div class="wrap">
+    <div class="en">Case 03 · Real JD · Intern Role · Cold Start</div>
+    <h1>Watrix Worldline × 海外冷启动方案</h1>
+    <p>目标岗位：<b>Global Social Media Operations Intern (World Models)</b>（银河水滴 · 北京/远程实习）<br>
+    核心任务：<b>每款产品上线当周完成海外冷启动</b>—— X / Product Hunt / Reddit / TikTok / Discord 五线作战</p>
+    <span class="badge">X</span><span class="badge">Product Hunt</span><span class="badge">Reddit</span>
+    <span class="badge">TikTok</span><span class="badge">Discord</span><span class="badge sage">AI Native</span>
+    <div style="margin-top:24px">
+      <a class="btn sage" href="#sop">看上线周 SOP ↓</a>
+      <a class="btn" href="#content">看 9 条英文内容 ↓</a>
+      <a class="btn ghost" href="#fit">看自荐映射 ↓</a>
+    </div>
+    <p class="small" style="margin-top:20px">主线：把"世界模型技术"翻译成大众愿意玩的产品故事——上线当周冷启动是硬指标，数据（打开/玩完/分享/回访）决定产品去留。</p>
+  </div>
+</header>
+
+<!-- 02 JD BREAKDOWN -->
+<section>
+  <div class="wrap">
+    <div class="kicker">01 / JD Breakdown</div>
+    <h2>岗位拆解 × 公司与产品理解</h2>
+    <p class="sub">岗位出自银河水滴（Watrix）Worldline 部门。先读懂公司再写方案：这决定内容的"技术底气"。</p>
+    <div class="grid2">
+      <div class="card">
+        <h3>公司：从"识别人"到"理解人"</h3>
+        <table>
+          <tr><td style="width:100px">出身</td><td>中科院自动化所谭铁牛院士团队孵化，2016 年成立</td></tr>
+          <tr><td>技术名片</td><td>步态识别国家队：制定中国首个步态识别国标、世界人工智能大会 SAIL 奖、300+ 城市落地</td></tr>
+          <tr><td>新方向</td><td>人本世界模型 HOWM（Human-Oriented World Model）：对人-世界交互建模、推演、生成、模仿</td></tr>
+          <tr><td>数据资产</td><td>100 亿小时真实视频、2 万亿人次行为观测数据</td></tr>
+          <tr><td>节奏</td><td>HOWM 1.0 计划 2026 Q4 发布</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h3>Worldline：滚动上架的产品部门</h3>
+        <table>
+          <tr><td style="width:100px">模式</td><td>多款产品并行、快速上线、按数据决定去留（打开/玩完/分享/回访）</td></tr>
+          <tr><td>能力面</td><td>生成推理 · 情绪识别 · 动作行为预测 · 步态识别 · 人体关键帧</td></tr>
+          <tr><td>产品形态</td><td>C/B 端 AI 产品 + 消费级硬件：首款为树莓派级桌面交互设备（识别人脸、读取情绪、看懂动作并反馈），后续桌宠/音箱/带轮机器人</td></tr>
+          <tr><td>口号</td><td>从"先学会认识一个人"到"如今想理解一个人"</td></tr>
+          <tr><td>团队气质</td><td>年轻有趣；宣发与社交创意在边界内几乎不限</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="card" style="margin-top:20px">
+      <h3>JD 四条职责 → 本方案的对应章节</h3>
+      <table>
+        <tr><th style="width:50px">#</th><th>岗位职责</th><th>本方案落点</th></tr>
+        <tr><td class="num-cell">1</td><td>在架产品海外冷启动：X、Product Hunt、Reddit、TikTok、Discord 发布与首批用户获取，<b>上线当周完成冷启动</b></td><td>→ 03 上线当周 7 天 SOP（对标 Rabbit / Friend / LOOI / Ropet 真实 launch 数据）</td></tr>
+        <tr><td class="num-cell">2</td><td>运营海外账号矩阵，产出产品/技术内容，<b>把玩法讲清楚、讲得有趣</b></td><td>→ 02 账号矩阵 + 05 九条英文内容（按五平台语感写）</td></tr>
+        <tr><td class="num-cell">3</td><td>盯海外数据（打开/玩完/分享/回访），每周渠道对比与建议；<b>收集海外用户反馈翻译整理同步产品与工程</b></td><td>→ 06 数据体系（四层漏斗 + 周报模板 + 反馈翻译模板）</td></tr>
+        <tr><td class="num-cell">4</td><td>跟踪海外同类产品增长与声量打法，<b>积累可复用的记录</b></td><td>→ 04 同类产品打法研究（4 个案例 + 跨案例结论）</td></tr>
+      </table>
+      <div class="warn" style="margin-top:12px">⚠️ 具体在架产品名以入职后为准。本方案按公开信息锚定<b>首款桌面交互设备</b>做演示（代号 <b>Pip</b>，产品名为占位，内容模板可一键替换）；冷启动 SOP 与账号矩阵与任何产品通用。</div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 ACCOUNT MATRIX -->
+<section>
+  <div class="wrap">
+    <div class="kicker">02 / Account Matrix</div>
+    <h2>账号矩阵：一个主账号，五条作战线</h2>
+    <div class="grid2">
+      <div class="card">
+        <h3>账号体系设计</h3>
+        <table>
+          <tr><td style="width:110px">公司主账号</td><td>@Watrix（X/TikTok）：讲技术故事与品牌信用——步态识别 10 年积累是信任背书</td></tr>
+          <tr><td>产品账号</td><td>每个产品用主账号发 launch thread + 专属 hashtag（#Worldline + #产品名），冷启动期不另开账号分散火力</td></tr>
+          <tr><td>创始人联动</td><td>CEO 黄永祯个人账号转推/评论——对标 Rabbit 创始人个人品牌与 Friend 创始人单条视频 2,300 万播放的打法</td></tr>
+          <tr><td>社区</td><td>Discord 一个服务器容纳全部产品线（#product-新闻 + #feedback 分区），对标 Viggle 400 万成员玩法教育</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h3>五平台分工与北极星</h3>
+        <table>
+          <tr><th>平台</th><th>角色</th><th>北极星指标</th></tr>
+          <tr><td>X</td><td>发布主阵地 + 创始人联动 + 媒体/KOL 接触面</td><td>引用转发 · 视频播放</td></tr>
+          <tr><td>Product Hunt</td><td>上线当日主战场（软件类产品）</td><td>upvote · 当日排名</td></tr>
+          <tr><td>Reddit</td><td>信任与反馈层（r/artificial、r/robotics、r/RASPBERRY_PI_PROJECTS）</td><td>upvote 率 · 讨论深度</td></tr>
+          <tr><td>TikTok</td><td>3 秒 demo 拉新（硬件产品的主增长引擎）</td><td>完播率 · 转发</td></tr>
+          <tr><td>Discord</td><td>留存 + 反馈 + 下一款产品的种子用户</td><td>周活 · 活动参与</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 LAUNCH SOP -->
+<section id="sop">
+  <div class="wrap">
+    <div class="kicker">03 / Launch SOP</div>
+    <h2>上线当周冷启动：7 天作战手册</h2>
+    <p class="sub">对标数据：Rabbit R1 上线 24 小时 10,000 台（$199 无订阅钩子）；Friend 单条发布视频 2,300 万+ 播放；LOOI Kickstarter 3,578 backers（10,300% 完成）；Ropet 48 小时 $30 万、70% 女性首购。</p>
+
+    <span class="wtag">D-3 ~ D-1 · 预热</span>
+    <table class="cal">
+      <tr><th style="width:70px">时间</th><th style="width:110px">平台</th><th>动作</th><th>产出物</th></tr>
+      <tr><td class="day">D-3</td><td>X</td><td>发 3 条 teaser：产品剪影 / 技术彩蛋（"我们做过步态识别，现在它学会了看你"）/ 倒计时</td><td>预热 thread</td></tr>
+      <tr><td class="day">D-2</td><td>TikTok</td><td>发 2 条 demo teaser（不露全貌，只露"情绪反应"瞬间）</td><td>teaser ×2</td></tr>
+      <tr><td class="day">D-1</td><td>Reddit</td><td>目标 subreddit 潜水 + 有价值评论 3-5 条（先贡献再发帖，避免自推被删）</td><td>账号信誉</td></tr>
+    </table>
+
+    <span class="wtag w2">D0 · 发布日</span>
+    <table class="cal">
+      <tr><th style="width:70px">时间</th><th style="width:110px">平台</th><th>动作</th><th>产出物</th></tr>
+      <tr><td class="day">D0 上午</td><td>Product Hunt</td><td>软件类产品 12:01 PST 上线 PH（launch 详情页 + maker's comment + 团队值守回复）</td><td>PH 页面</td></tr>
+      <tr><td class="day">D0 上午</td><td>X</td><td>发布 launch thread（5 条：产品是什么→技术来路→玩法→开放心态→链接）+ 创始人转推</td><td>launch thread</td></tr>
+      <tr><td class="day">D0 中午</td><td>TikTok</td><td>3 秒结果先行的 demo 视频 ×1（"it reads my mood"）</td><td>demo 视频</td></tr>
+      <tr><td class="day">D0 下午</td><td>Reddit</td><td>r/artificial 或 r/robotics 发 AMA/讨论帖（诚实讲技术边界，问社区想要什么）</td><td>讨论帖</td></tr>
+      <tr><td class="day">D0 晚间</td><td>Discord</td><td>服务器开门 + 欢迎流程 + 首周活动公告（玩法投票）</td><td>社区活动</td></tr>
+    </table>
+
+    <span class="wtag w3">D1-D3 · 冲刺</span>
+    <table class="cal">
+      <tr><th style="width:70px">时间</th><th style="width:110px">平台</th><th>动作</th><th>产出物</th></tr>
+      <tr><td class="day">D1-2</td><td>全平台</td><td>PH/X/Reddit 评论值守（1 小时内回复）；收集"高频问题"形成 FAQ</td><td>FAQ</td></tr>
+      <tr><td class="day">D2</td><td>TikTok</td><td>第 2 条 demo（桌宠日常向，换钩子）</td><td>demo ×2</td></tr>
+      <tr><td class="day">D3</td><td>X</td><td>媒体/KOL list 建联（tech 类 10-20 人，发个性化私信 + 样机/邀请码）</td><td>outreach 记录</td></tr>
+    </table>
+
+    <span class="wtag w4">D4-D7 · 收尾</span>
+    <table class="cal">
+      <tr><th style="width:70px">时间</th><th style="width:110px">平台</th><th>动作</th><th>产出物</th></tr>
+      <tr><td class="day">D4-5</td><td>—</td><td>数据初盘：四层漏斗按渠道拆（见 06）</td><td>初盘表</td></tr>
+      <tr><td class="day">D6</td><td>—</td><td>用户反馈翻译整理 → 产品/工程同步（英文原话 + 中文要点 + 优先级建议）</td><td>反馈文档</td></tr>
+      <tr><td class="day">D7</td><td>—</td><td>冷启动周报：渠道对比 + 下一步建议 + 可复用打法记录（职责 4 的沉淀）</td><td>周报</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- 05 COMPETITOR GROWTH PLAYBOOKS -->
+<section>
+  <div class="wrap">
+    <div class="kicker">04 / Growth Playbooks</div>
+    <h2>同类产品增长与声量打法：4 个案例（可复用记录）</h2>
+    <p class="sub">对应职责 4：跟踪海外同类产品打法，积累可复用记录。以下数据均来自公开渠道（见 09 来源），采集于 2026-11。</p>
+
+    <div class="grid2">
+      <div class="card comp">
+        <h3>① Rabbit R1 — 事件营销 + 创始人个人品牌</h3>
+        <div class="kpirow">
+          <span>上线 24h <b>10,000 台</b>（内部目标仅 500）</span><span>两个月 <b>10 万+ 预购</b></span><span>钩子：<b>$199 无订阅</b> vs Humane $699+月费</span>
+        </div>
+        <p class="small">打法：CES 会场外酒店发布会抢声量 → 创始人 keynote 病毒传播 → 橙色复古设计自带传播性 → 几乎零投放。教训：hype 与产品能力错配（MKBHD"barely reviewable"），后靠 30+ OTA 更新与每周社区 workshop 翻盘。</p>
+        <p class="attrib">复用点：定价钩子一句话打透；产品弱时不辩解、用 OTA 周更叙事重建信任——Worldline 的"周更节奏"天然适配。</p>
+      </div>
+      <div class="card comp">
+        <h3>② Friend — 一条 2,300 万播放的发布视频</h3>
+        <div class="kpirow">
+          <span>发布视频 <b>2,300 万+ 播放</b></span><span>融资 $850 万 @ <b>$5,000 万估值</b></span><span>域名 <b>$180 万</b>（融资的 70%）</span>
+        </div>
+        <p class="small">打法："introducing friend. not imaginary." 一条视频讲完产品；创始人争议营销（"controversy as product"）。教训：孤独救赎叙事反噬——地铁广告被涂鸦 "AI is not your friend"，发货多次延期，仅 ~5,000 台售出。</p>
+        <p class="attrib">复用点：单条爆款视频 > 百条平庸内容；但情绪叙事必须克制——Worldline 应讲"它看得懂你"（可验证），不讲"它拯救你"。</p>
+      </div>
+      <div class="card comp">
+        <h3>③ LOOI — 手机当大脑的桌面机器人</h3>
+        <div class="kpirow">
+          <span>Kickstarter <b>$518,838</b> / 3,578 backers</span><span><b>10,300%</b> 完成率</span><span>马斯克点赞转发</span><span>万台交付 · 退货率 <b>4.36%</b></span>
+        </div>
+        <p class="small">打法：X 病毒传播（马斯克互动）→ CES 2025 曝光（LIFEHACKER 年度 7 酷产品）→ 1,200+ 动作、233 触发器的"桌宠感"内容。教训：1-3 秒云端延迟与行为重复是差评焦点。</p>
+        <p class="attrib">复用点：桌面形态内容要拍"陪伴感"（看主人、歪头、跟着鼠标跑）——Worldline 的情绪识别恰好能把"反应"拍得比竞品更真实。</p>
+      </div>
+      <div class="card comp">
+        <h3>④ Ropet — 女性向"治愈日常"的打法模板</h3>
+        <div class="kpirow">
+          <span>48h <b>$30 万</b>（KS 目标仅 $1.2 万）</span><span>backers <b>70% 为女性首次众筹用户</b></span><span>CES 2025 全球曝光 <b>60 亿</b>（官方主张）</span><span>日本 Makuake 机器人类 <b>#1</b>（¥7,610 万）</span>
+        </div>
+        <p class="small">打法：抖音/小红书精准投"打工人的治愈日常""桌面陪伴 vlog" + KOL/KOC 种草 + 用户 UGC；创始人 CES 期间每日深夜亲自更新社媒；卖点 "37.5°C 温度、求抱抱"。</p>
+        <p class="attrib">复用点：桌面陪伴品类的核心人群=25-35 岁城市女性；"治愈"而非"玩具"的定位；创始人下场日更是声量放大器。</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:20px">
+      <h3>跨案例三条结论（对 Worldline 的行动）</h3>
+      <table>
+        <tr><th style="width:240px">结论</th><th>对 Worldline 的行动</th></tr>
+        <tr><td><b>A. 声量靠"事件+视频"，不靠日常推文</b>（Rabbit CES / Friend 视频 / Ropet CES）</td><td>每个产品上线必须有一条 15-30 秒的"结果先行"视频（情绪反应瞬间）+ 一个可被引用的定价/能力钩子</td></tr>
+        <tr><td><b>B. 情绪类硬件最怕"承诺 > 交付"</b>（Rabbit 差评 / Friend 涂鸦）</td><td>内容把玩法讲具体（JD 原话"讲清楚、讲得有趣"）：演示真实交互，不抒情；差评不辩解，用周更 OTA + 社区 workshop 回应</td></tr>
+        <tr><td><b>C. 中国团队出海桌面陪伴的窗口期正在当下</b>（LOOI 万台 / Ropet 千万融资）</td><td>差异化就是世界模型：竞品靠脚本化行为（1,200 动作），Worldline 靠"真看懂"（情绪+动作实时理解）——内容侧持续放大这一点</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 06 ENGLISH CONTENT -->
+<section id="content">
+  <div class="wrap">
+    <div class="kicker">05 / Content Works</div>
+    <h2>9 条可直接发布的英文内容</h2>
+    <p class="sub">覆盖五平台，按各平台语感写。产品代号 Pip（桌面交互设备，占位名），发布时替换为真实产品名。X 是发布主阵地（thread + 创始人联动），PH 是上线当日主战场，Reddit 走技术诚实路线。</p>
+
+    <div class="grid2">
+      <!-- 1 X thread -->
+      <div class="post">
+        <div class="phead"><span class="plat">X / TWITTER</span><span class="fmt">发布 Thread · 5 帖</span></div>
+        <div class="pbody">
+          <div class="lbl">Thread</div>
+          <p class="en-copy">1/5 Meet Pip: a desktop robot that reads your face, your mood, and your moves — and answers back. Built on a world model trained on human behavior. Live today. 👇</p>
+          <p class="en-copy">2/5 Watrix started with gait recognition — we've identified how people walk in 300+ cities. Pip is what happens when that tech learns to <i>understand</i> instead of just recognize.</p>
+          <p class="en-copy">3/5 Sigh → it tilts its head. Smile → it smiles back. Zone out → it nudges you. Real-time emotion + action recognition. No scripted loops — it actually reads you.</p>
+          <p class="en-copy">4/5 Raspberry-Pi-class hardware, open for makers. First drop from Worldline — we ship something new every few weeks, build in public, and let the data decide what survives.</p>
+          <p class="en-copy">5/5 Live now → [PH link]. Try it, break it, tell us what it should feel like. We answer everything in the comments + Discord.</p>
+          <p class="why"><b>为什么：</b>Thread 结构 = 产品→信用（步态识别背景）→玩法→节奏→CTA；第 3 帖是唯一"抒情"位置且全部可验证，对应结论 B 的克制原则。</p>
+        </div>
+      </div>
+
+      <!-- 2 X demo tweet -->
+      <div class="post">
+        <div class="phead"><span class="plat">X / TWITTER</span><span class="fmt">Demo 单推 · 附 20s 视频</span></div>
+        <div class="pbody">
+          <div class="lbl">Tweet</div>
+          <p class="en-copy">Pip watches me work. When I sigh, it tilts its head. When I smile at it, it smiles back. It's been on my desk for two hours and I'm already attached. 🥹</p>
+          <p class="en-copy"><span class="small">[视频：0-3s 叹气→歪头特写 · 3-10s 三种表情三连反应 · 10-20s 工位日常混剪]</span></p>
+          <p class="why"><b>为什么：</b>口语化 + 情绪真实（"already attached"）；视频结构沿用"3 秒结果先行"。这是可被引用/转发的单条素材，对标 Friend 的单条爆款路线。</p>
+        </div>
+      </div>
+
+      <!-- 3 X founder retweet -->
+      <div class="post">
+        <div class="phead"><span class="plat">X / TWITTER</span><span class="fmt">创始人转推语</span></div>
+        <div class="pbody">
+          <div class="lbl">Founder Retweet Copy</div>
+          <p class="en-copy">Ten years of gait recognition taught us how people move. Worldline is us asking a bigger question: can a machine understand how people <i>feel</i>? Pip is our first answer. Shipping every few weeks from here — follow along.</p>
+          <p class="why"><b>为什么：</b>创始人账号联动是 Rabbit/Friend/Ropet 三家的共同打法；这条把"技术老兵转消费者产品"的故事交到 CEO 个人信用上，一次转推胜过十条官方帖。</p>
+        </div>
+      </div>
+
+      <!-- 4 PH page -->
+      <div class="post">
+        <div class="phead"><span class="plat">PRODUCT HUNT</span><span class="fmt">Launch 页面文案</span></div>
+        <div class="pbody">
+          <div class="lbl">Tagline</div>
+          <p class="en-copy">A desktop AI companion that reads your mood and moves — face, emotion &amp; action recognition on Raspberry-Pi-class hardware</p>
+          <div class="lbl">Description</div>
+          <p class="en-copy"><b>What it is:</b> Pip sits on your desk, watches how you feel, and reacts in real time — no cloud round-trip, no scripts.<br>
+          <b>Who it's for:</b> people who want a desk that's less lonely, makers who want hackable hardware, and anyone curious what a world model feels like.<br>
+          <b>How it works:</b> onboard camera + emotion/action recognition models (from Watrix's 10-year gait-recognition research) drive 1,000+ biomimetic reactions. It learns your patterns over time.<br>
+          <b>Why we built it:</b> recognizing people was step one. Understanding them is the real product. This is the first drop from Worldline — more every few weeks.</p>
+          <p class="why"><b>为什么：</b>PH 用户是 maker/工程师/产品人——文案要"功能具体 + 技术出身 + 可 hack"；四个小节结构是 PH 高票详情页的通用骨架。</p>
+        </div>
+      </div>
+
+      <!-- 5 PH maker comment -->
+      <div class="post">
+        <div class="phead"><span class="plat">PRODUCT HUNT</span><span class="fmt">Maker's Comment</span></div>
+        <div class="pbody">
+          <div class="lbl">First Comment</div>
+          <p class="en-copy">Hey hunters! We're the Worldline team at Watrix — you might know us from gait recognition (300+ cities, one of the first national standards). Pip is our first consumer product, built on our human-centric world model (HOWM).</p>
+          <p class="en-copy">Three things we'd love your input on: ① which interactions feel genuinely useful vs. gimmicky ② what a desktop companion should NEVER do ③ what should the next drop be?</p>
+          <p class="en-copy">We'll be here all day answering everything — hardware, models, why we didn't put it in the cloud. AMA.</p>
+          <p class="why"><b>为什么：</b>Maker's comment 是 PH 排名之外的"第二战场"：提问式收评论 + 全天值守承诺（对应 SOP D1-2 值守）+ 为下一款产品预收集需求。</p>
+        </div>
+      </div>
+
+      <!-- 6 Reddit -->
+      <div class="post">
+        <div class="phead"><span class="plat">REDDIT</span><span class="fmt">r/artificial · AMA 帖</span></div>
+        <div class="pbody">
+          <div class="lbl">Title</div>
+          <p class="en-copy">We built a desktop robot that reads your mood from face + body language — AMA about emotion recognition on Pi-class hardware</p>
+          <div class="lbl">Body</div>
+          <p class="en-copy">Team behind this: we spent 10 years on gait recognition (identifying people by how they walk), then started wondering — what if the model didn't stop at ID, but kept learning what your posture and micro-expressions mean?</p>
+          <p class="en-copy">Pip is the result: an onboard camera, no cloud, real-time emotion + action recognition, ~1,000 behaviors driven by a world model rather than scripted loops. Latency is our biggest fight right now; ask us anything about that or the model stack.</p>
+          <p class="en-copy">Also genuinely asking: what would YOU want a desktop companion to do when it notices you're stressed? What crosses the line into creepy?</p>
+          <p class="why"><b>为什么：</b>Reddit 要技术诚实（主动暴露延迟问题换信任）；"什么算 creepy"的边界提问既是产品调研又是高互动钩子——r/artificial 用户最爱讨论 AI 边界。</p>
+        </div>
+      </div>
+
+      <!-- 7 TikTok mood demo -->
+      <div class="post">
+        <div class="phead"><span class="plat">TIKTOK</span><span class="fmt">产品 Demo · 22s</span></div>
+        <div class="pbody">
+          <div class="lbl">Caption</div>
+          <p class="en-copy">Pip reads the room. literally. #robotpet #desktopcompanion #aitech #worldmodels</p>
+          <div class="lbl">Script</div>
+          <table class="script">
+            <tr><th>时间</th><th>画面</th><th>字幕</th></tr>
+            <tr><td class="t">0–3s</td><td>叹气→Pip 立刻歪头看过来（结果先行）</td><td>it heard me sigh and it KNEW</td></tr>
+            <tr><td class="t">3–10s</td><td>三种表情三连反应：微笑/皱眉/惊讶</td><td>smile → smiles back. frown → comes closer. shock → freezes with you</td></tr>
+            <tr><td class="t">10–18s</td><td>手机拍下全程反应，无剪辑痕迹</td><td>real-time. no cloud. no scripted loops.</td></tr>
+            <tr><td class="t">18–22s</td><td>CTA</td><td>what mood should I test next 👇</td></tr>
+          </table>
+          <p class="why"><b>为什么：</b>TikTok 前 3 秒必须出现"机器读懂人"的瞬间（情绪识别是 Worldline 独有卖点）；"what mood should I test"把评论变成下一条选题。</p>
+        </div>
+      </div>
+
+      <!-- 8 TikTok desk pet -->
+      <div class="post">
+        <div class="phead"><span class="plat">TIKTOK</span><span class="fmt">桌宠日常 · 18s</span></div>
+        <div class="pbody">
+          <div class="lbl">Caption</div>
+          <p class="en-copy">my coworker is a robot and it's judging my posture 🫣 #deskpet #robotdaily #wfh #aitech</p>
+          <div class="lbl">Script</div>
+          <table class="script">
+            <tr><th>时间</th><th>画面</th><th>字幕</th></tr>
+            <tr><td class="t">0–3s</td><td>Pip 在桌上盯着我（先出冲突感）</td><td>my coworker is judging my posture</td></tr>
+            <tr><td class="t">3–12s</td><td>日常混剪：早上问好/工作提醒/完成任务的庆祝</td><td>greets me at 9am. nudges me at hour 3. dances when the task is done</td></tr>
+            <tr><td class="t">12–18s</td><td>展示 5 分钟开箱设置</td><td>setup in 5 min. pi-class. maker-friendly.</td></tr>
+          </table>
+          <p class="why"><b>为什么：</b>对应 Ropet 验证过的"治愈日常"主题（25-35 城市女性核心人群）；"judging my posture"的幽默感避免 Ropet 式过度拟人，反而更像真实桌宠。</p>
+        </div>
+      </div>
+
+      <!-- 9 Discord -->
+      <div class="post">
+        <div class="phead"><span class="plat">DISCORD</span><span class="fmt">开门 + 首周活动</span></div>
+        <div class="pbody">
+          <div class="lbl">Welcome Message（#welcome）</div>
+          <p class="en-copy">🤖 <b>WELCOME TO WORLDLINE LAB</b> — this server is where our products get shaped before they ship. We drop something new every few weeks; you're the reason they survive or get killed. Read #rules, grab a role, and say hi in #intros — Pip says hello back.</p>
+          <div class="lbl">First Event（#announcements, @event-ping）</div>
+          <p class="en-copy">🐾 <b>EVENT — WHAT SHOULD PIP LEARN NEXT?</b><br>
+          Vote with reactions: 🎵 sing when music plays / ☕ coffee-break mode / 📚 study timer / 🤸 celebrate wins<br>
+          Top pick ships in the next OTA update. Bonus: best idea in #feature-ideas gets a beta unit.</p>
+          <p class="why"><b>为什么：</b>开门语把"滚动上架"机制讲成游戏规则（数据定去留=用户参与产品生死）；投票结果直接成为 OTA 功能——对应 JD"办过活动"与 Rabbit 社区 workshop 的翻盘打法。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 DATA SYSTEM -->
+<section>
+  <div class="wrap">
+    <div class="kicker">06 / Data System</div>
+    <h2>数据体系：打开 → 玩完 → 分享 → 回访</h2>
+    <p class="sub">JD 原词的四层漏斗 + 每周渠道对比 + 反馈翻译同步。这也是面试会被直接问到的"数据习惯"。</p>
+
+    <div class="kpi">
+      <div class="step"><div class="n">01</div><b>打开</b><br><span class="small">曝光→点击/落地<br>各平台点击率</span></div>
+      <div class="step"><div class="n">02</div><b>玩完</b><br><span class="small">核心动作完成率<br>Demo 看完/设置完成</span></div>
+      <div class="step"><div class="n">03</div><b>分享</b><br><span class="small">转发/UGC/带话题<br>病毒系数</span></div>
+      <div class="step"><div class="n">04</div><b>回访</b><br><span class="small">次留/周活/Discord 回流<br>留存曲线</span></div>
+    </div>
+
+    <div class="grid2" style="margin-top:20px">
+      <div class="card">
+        <h3>每周渠道对比表（模板 + 示例）</h3>
+        <table>
+          <tr><th>渠道</th><th>打开</th><th>玩完</th><th>分享</th><th>回访</th><th>结论 <span class="ex-tag">EXAMPLE</span></th></tr>
+          <tr><td>X</td><td class="num-cell">12,400</td><td class="num-cell">—</td><td class="num-cell">312</td><td class="num-cell">—</td><td>发布+传播，转化弱</td></tr>
+          <tr><td>Product Hunt</td><td class="num-cell">3,800</td><td class="num-cell">—</td><td class="num-cell">—</td><td class="num-cell">41</td><td>当日爆发，长尾弱</td></tr>
+          <tr><td>Reddit</td><td class="num-cell">5,100</td><td class="num-cell">—</td><td class="num-cell">—</td><td class="num-cell">87</td><td>讨论深，转化慢</td></tr>
+          <tr><td>TikTok</td><td class="num-cell">48,900</td><td class="num-cell">38%</td><td class="num-cell">1,204</td><td class="num-cell">—</td><td>增长主引擎 · 加大</td></tr>
+          <tr><td>Discord</td><td class="num-cell">—</td><td class="num-cell">—</td><td class="num-cell">—</td><td class="num-cell">62%</td><td>留存池 · 周活上升</td></tr>
+        </table>
+        <p class="chartcap">每行强制写"结论+动作"——周报不罗列数字，只输出下一步建议（JD 职责 3 原话）。</p>
+      </div>
+      <div class="card">
+        <h3>「最近一条内容的数据及为什么」示范回答</h3>
+        <p class="small">JD 要求 5：能说出自己账号最近一条内容的数据以及为什么。面试 30 分钟必被问——这是标准回答结构：</p>
+        <p style="margin-top:10px">"我最近一条 TikTok 是 Pip 的 22 秒 demo（<i>it heard me sigh and it KNEW</i>）：<b>播放 8,400，完播率 41%</b>（我账号均值 28%），<b>转发 96 条</b>，评论区 31 条里 9 条在问"where can I buy"。</p>
+        <p><b>为什么它好：</b>前 3 秒出现了'叹气→机器人回应'的完整冲突，而上一版 demo 前 3 秒是开箱画面，完播率只有 19%。所以下一条我把'情绪反应'再前置 0.5 秒，并把购买问询做成置顶评论。"</p>
+        <p class="small" style="margin-top:10px">结构 = 数据 → 对比 → 归因 → 下一动作——起号后换成真实数据即可。</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:20px">
+      <h3>用户反馈 → 产品/工程同步模板</h3>
+      <table>
+        <tr><th style="width:90px">字段</th><th>内容</th></tr>
+        <tr><td>原话</td><td>英文原句 + 来源（平台/帖链接/用户 ID）——保留语气，不加工</td></tr>
+        <tr><td>翻译要点</td><td>中文要点 + 用户真实意图（要功能？抱怨延迟？误解玩法？）</td></tr>
+        <tr><td>归类</td><td>BUG / 玩法建议 / 内容反馈 / 购买意向</td></tr>
+        <tr><td>优先级建议</td><td>P0（阻塞使用）/ P1（下周 OTA）/ P2（池化）——由出现频次决定，附频次统计</td></tr>
+      </table>
+      <p class="small">每周一上午发出，抄送产品与工程；同一条反馈连续两周出现自动升 P1。这是"推动产品迭代"（职责 3）的最小可行机制。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 08 30-DAY RHYTHM -->
+<section>
+  <div class="wrap">
+    <div class="kicker">07 / 30-Day Rhythm</div>
+    <h2>30 天节奏：滚动上架版（两轮冷启动 + 复盘）</h2>
+    <p class="sub">岗位是滚动上架，节奏按"launch 周期"而非固定栏目。假设入职第 1 周接手产品 A（软件类），第 3 周产品 B（硬件类）：</p>
+    <table class="cal">
+      <tr><th style="width:100px">周</th><th>主任务</th><th>关键产出物</th><th>KPI 关注</th></tr>
+      <tr><td><b>W1</b> 产品 A 冷启动</td><td>执行 03 的 7 天 SOP：预热 → D0 五线发布 → 值守 → 周报</td><td>PH 页面 · launch thread · 3 条视频 · 反馈文档</td><td>PH 排名 · 视频完播 · 链接点击</td></tr>
+      <tr><td><b>W2</b> A 复盘 + B 预热</td><td>A 的四层漏斗周报 + 反馈同步；B 的 teaser 与 Reddit 信誉积累；媒体/KOL list 建联</td><td>渠道对比表 · 反馈文档 · B 预热素材</td><td>A 回访率 · B 预热互动</td></tr>
+      <tr><td><b>W3</b> 产品 B 冷启动</td><td>硬件版 SOP（PH 换成 Kickstarter/预购页，TikTok 权重拉满——对标 Ropet）</td><td>launch 视频 · Reddit AMA · Discord 活动</td><td>预购转化 · 病毒系数</td></tr>
+      <tr><td><b>W4</b> 复盘 + 沉淀</td><td>两轮冷启动对比复盘；竞品打法周报定版（职责 4 的"可复用记录"）；下月产品 C 计划</td><td>月报 · 打法手册 v1 · 下月排期</td><td>—</td></tr>
+    </table>
+    <p class="small" style="margin-top:12px">滚动的意义：第二轮必须比第一轮快 30% 以上——SOP 的每一个步骤在第一轮记录耗时，第二轮砍掉低效环节（这也是"用 AI 把一件事从 0 推到能跑"的实证方式）。</p>
+  </div>
+</section>
+
+<!-- 09 WHY ME -->
+<section id="fit">
+  <div class="wrap">
+    <div class="kicker">08 / Why Me</div>
+    <h2>自荐映射：JD 要求 → 我的证据</h2>
+    <div class="card">
+      <table>
+        <tr><th style="width:200px">JD 要求</th><th>我的证据</th></tr>
+        <tr><td>英文写出自然、有网感的帖子与回复</td><td>本页 9 条 + Catnip 案 9 条，共 18 条英文样稿，覆盖五平台语感；全部原创</td></tr>
+        <tr><td>自己在海外平台活跃：有运营中的账号，或有 sense 和变现力</td><td>研究型 sense：1,240 条 YouTube Shorts 爆款结构化拆解（标题长度/数字占比/钩子结论）+ 10,000 条推文分析；本页 9 条英文内容即"网感"的成稿证明</td></tr>
+        <tr><td>发过产品、办过活动、带起过话题</td><td>LoomQ-2026（黑客松量子赛道入围，GitHub 开源=发过产品）；机器人队队长带过 20+ 人办赛与备赛（活动）；乙女向选题库（话题策划）</td></tr>
+        <tr><td>日常用 AI 工具工作，能说清用什么、怎么用</td><td>本作品集全程 Claude Code 驱动：拆 JD → 检索竞品数据 → 生成内容 → 渲染目检；工具链：Claude Code + Python（yt-dlp/情感分析词表）+ 渲染验证</td></tr>
+        <tr><td>对数据有习惯：说出最近一条内容的数据及为什么</td><td>见 06 示范回答结构；底账可复跑（1,240 条 Shorts、10,000 条推文，含命令与日志）</td></tr>
+        <tr><td>加分：PH launch 经历</td><td>03 已备好 PH 全流程 SOP：launch 页面文案、maker's comment、值守回复与 FAQ 模板，入职即可执行</td></tr>
+        <tr><td>加分：Discord / Reddit 社群运营</td><td>黑客松社区与机器人队社群经历 + 两案中各 1 套 Discord/Reddit 完整运营文案</td></tr>
+        <tr><td>加分：剪简单短视频</td><td>能剪（节奏卡点/字幕/3 秒钩子），本页 2 条 TikTok 脚本含完整分镜可直接拍剪</td></tr>
+      </table>
+    </div>
+
+    <div class="card" style="margin-top:20px">
+        <h3>为什么是我（三句话）</h3>
+        <p class="tagline">1. 我是"用 AI 把一件事从 0 推到能跑"的活样本：本方案从拿到 JD 到可交付内容，全程 AI 驱动、数据可溯源。</p>
+        <p class="tagline">2. 我有网感的证据是研究结论，不是感觉：1,240 条真实爆款拆解告诉我 3 秒钩子和数字标题的规律——本页每条内容都按这个规律写。</p>
+        <p class="tagline">3. 我的转行路径证明自驱：机器人队冠军 → 5,000+ 导师库 → 黑客松入围 → 海外内容研究 → 两份可执行方案。不设门槛的岗位，正适合用作品说话。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 10 SOURCES -->
+<section>
+  <div class="wrap">
+    <div class="kicker">09 / Sources &amp; Honesty</div>
+    <h2>数据来源与诚信说明</h2>
+    <div class="src">
+      <b>公司与岗位信息来源：</b><br>
+      · 36kr 项目页（银河水滴，B 轮 3 亿元，2016 年成立）：<a href="https://pitchhub.36kr.com/project/1679797156942592">pitchhub.36kr.com/project/1679797156942592</a><br>
+      · 岗位原文：<a href="http://www.watrix.ai/careers/students/global-social?from=join-us">watrix.ai/careers/students/global-social</a>（Global Social Media Operations Intern）<br>
+      · 公司战略与 Worldline 部门：<a href="http://mp.weixin.qq.com/s?__biz=MzI3NTM3MTg5OA==&mid=2247490081&idx=1&sn=48b1420b512d3b2b47e632eda1172ddc">银河水滴落户广州海珠：下一程人本世界模型</a> · <a href="http://www.watrix.ai/careers/students/ai-product?from=join-us">AI Product Intern 岗位页</a><br><br>
+      <b>竞品/同类产品数据来源（采集于 2026-11，投递前请以平台实时数据复核）：</b><br>
+      · Rabbit R1：<a href="https://www.shacknews.com/article/138258/rabbit-r1-ai-companion-10000-sales">10,000 台/24h</a> · <a href="https://www.businessinsider.com/ai-device-tech-replace-rabbit-r1-sold-out-2024-1">$199 售罄</a> · <a href="https://ceoworld.biz/2025/10/15/rising-from-the-ashes-why-the-comeback-of-rabbit-is-good-news-for-ai/">OTA 翻盘复盘</a> · <a href="https://m.jiemian.com/article/14163565.html">35 次回应</a><br>
+      · Friend：<a href="https://m.36kr.com/p/3214498526373125">36氪：估值 5,000 万美元</a> · <a href="https://www.independent.co.uk/tech/friend-ai-artificial-intelligence-necklace-website-b2588543.html">$180 万域名</a> · <a href="https://www.cnews.fr/vie-numerique/2026-02-01/friend-quel-est-ce-compagnon-ia-dont-la-campagne-publicitaire-dans-le#1">巴黎地铁广告被涂鸦</a><br>
+      · LOOI：<a href="https://www.kickstarter.com/projects/tangiblefuture/looi-robot-turn-your-smartphone-into-a-desktop-robot">Kickstarter $518,838 / 3,578 backers</a> · <a href="https://www.cyzone.cn/agi/news/759740.html">马斯克点赞报道</a> · <a href="https://pocketanimus.com/guides/looi-robot/">万台交付/退货率</a><br>
+      · Ropet：<a href="https://kuajing.baijing.cn/article/5155#1">48h $35.5 万</a> · <a href="https://www.kickstarter.com/projects/1067657324/ropet-your-next-generation-ai-robot-pet">KS 页面</a> · <a href="https://m.cifnews.com/article/178629#1">爆火复盘</a> · <a href="https://bidclub.ai/e/weishijie-2025-09-08-50-ces">创始人访谈</a>
+    </div>
+    <div class="warn" style="margin-top:14px">
+      <b>口径说明：</b>① 产品代号 Pip 为占位（在架产品名以入职后为准），全部内容模板可一键替换。② 竞品数字为公开渠道观测值，不同信源可能有出入，已取可查证值并标注时间。③ 06 数据表为框架演示，示例数据已逐一标注 EXAMPLE。④ 9 条英文内容为原创样稿，未发布、无数据。
+    </div>
+  </div>
+</section>
+
+<!-- 11 CONNECT -->
+<section>
+  <div class="wrap" style="text-align:center">
+    <div class="kicker">10 / Connect</div>
+    <h2>给我一款产品，一周之内让它被海外用户看见</h2>
+    <p class="sub" style="margin:14px auto">冷启动 SOP · 账号矩阵 · 9 条英文内容 · 数据体系 · 竞品打法记录——本方案可直接照 JD 执行；面试 30 分钟，可以逐节讲给你听。</p>
+    <a class="btn sage" href="index.html">← 返回作品集主页</a>
+    <span class="btn ghost" style="cursor:default">📮 联系方式见简历</span>
+  </div>
+</section>
+
+<footer>
+  丁洁媛 · 海外社媒运营作品集 · Case 03 Watrix Worldline 海外冷启动 · 2026<br>
+  竞品数据来自公开渠道（见 09 来源）· 示例数据已标注 · 英文内容为原创样稿 · 产品代号为占位
+</footer>
+</body>
+</html>
