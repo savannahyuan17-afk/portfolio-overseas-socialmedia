@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>丁洁媛 · 海外社媒运营作品集 | Portfolio 2026</title>
+<!-- 设计参考: StartBootstrap/freelancer (GitHub ⭐2,606, MIT)，因网络受限改为自包含实现，结构致敬 -->
+<style>
+  :root{
+    --bg:#FAF6F3; --ink:#2B2730; --muted:#6E6873; --card:#FFFFFF;
+    --rose:#D98E8E; --rose-deep:#C47777; --cream:#F3E3DC; --sage:#7C9A8E;
+    --line:#EADFD8; --gold:#C9A227;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+  h1,h2,h3,.serif{font-family:Georgia,"Songti SC","STSong",serif}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  section{padding:64px 0;border-bottom:1px solid var(--line)}
+  .kicker{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--rose-deep);font-weight:600;margin-bottom:8px}
+  h2{font-size:30px;margin-bottom:8px}
+  .sub{color:var(--muted);font-size:15px;margin-bottom:36px;max-width:640px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;box-shadow:0 2px 10px rgba(43,39,48,.04)}
+  .card h3{font-size:17px;margin-bottom:10px}
+  .badge{display:inline-block;background:var(--cream);color:var(--rose-deep);border-radius:999px;padding:3px 12px;font-size:12px;font-weight:600;margin:0 6px 6px 0}
+  .badge.dark{background:var(--ink);color:#fff}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th{background:var(--cream);color:var(--ink);text-align:left;padding:10px 12px;font-weight:600}
+  td{padding:10px 12px;border-bottom:1px solid var(--line)}
+  .num{font-family:Georgia,serif;font-size:26px;color:var(--rose-deep)}
+  .small{font-size:12.5px;color:var(--muted)}
+  .tagline{font-style:italic;color:var(--sage)}
+  /* hero */
+  .hero{background:linear-gradient(160deg,#F6E9E4 0%,#FAF6F3 55%,#EDF1EC 100%);padding:88px 0 64px;text-align:center}
+  .hero h1{font-size:44px;letter-spacing:.02em}
+  .hero .en{letter-spacing:.3em;text-transform:uppercase;font-size:13px;color:var(--muted);margin:10px 0 18px}
+  .hero p{color:var(--muted);max-width:560px;margin:0 auto 22px}
+  .btn{display:inline-block;background:var(--ink);color:#fff;border-radius:999px;padding:12px 28px;font-size:14px;text-decoration:none;margin:0 6px}
+  .btn.ghost{background:transparent;border:1.5px solid var(--ink);color:var(--ink)}
+  /* content cards (英文内容作品) */
+  .igcard{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;aspect-ratio:4/5;display:flex;flex-direction:column;position:relative}
+  .igcard .img{flex:1;display:flex;align-items:center;justify-content:center;font-size:44px}
+  .igcard .cap{padding:14px 16px;border-top:1px solid var(--line);font-size:13.5px}
+  .igcard .cap .bold{font-weight:700}
+  .igcard .cap .eng{color:var(--muted);font-style:italic}
+  .igcard .tagchip{position:absolute;top:12px;left:12px;background:rgba(255,255,255,.9);border-radius:999px;padding:3px 10px;font-size:11px;font-weight:600;color:var(--rose-deep)}
+  .igcard .ig{position:absolute;top:12px;right:12px;background:rgba(43,39,48,.75);color:#fff;border-radius:999px;padding:3px 10px;font-size:11px}
+  .kpi{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+  .kpi .step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 12px;text-align:center}
+  .kpi .step .n{font-family:Georgia,serif;font-size:22px;color:var(--rose-deep)}
+  .pill{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:8px}
+  .warn{background:#FFF8E6;border:1px solid #EBD9A8;border-radius:12px;padding:16px 20px;font-size:13.5px;color:#7A6420}
+  footer{text-align:center;padding:44px 0;color:var(--muted);font-size:13px}
+  .chart{border:1px solid var(--line);border-radius:14px;background:#fff;padding:16px;text-align:center}
+  .chart img{max-width:100%;border-radius:8px}
+  .chart .cap{font-size:12.5px;color:var(--muted);margin-top:8px}
+  @media(max-width:820px){.grid2,.grid3,.kpi{grid-template-columns:1fr}}
+  @media print{section{padding:28px 0}}
+</style>
+</head>
+<body>
+
+<!-- 01 COVER -->
+<header class="hero">
+  <div class="wrap">
+    <div class="en">Social Media Portfolio · 2026</div>
+    <h1>丁洁媛 · 海外社媒运营作品集</h1>
+    <p>AI 内容方向｜从 0 到 1 试运营示范案例 + 真实数据研究<br>
+    主线：进入陌生领域 → 用 AI 做出东西 → 交给外部验证</p>
+    <span class="badge">AI Native · Claude Code</span>
+    <span class="badge">Data-Driven</span>
+    <span class="badge">Content Research</span>
+    <span class="badge">English Working Proficiency</span>
+    <div style="margin-top:26px">
+      <a class="btn" href="#data">看真实数据 ↓</a>
+      <a class="btn ghost" href="#case">看示范案例 ↓</a>
+      <a class="btn" href="catnips-case.html" style="background:var(--sage)">Catnip.AI 案例 →</a>
+    </div>
+  </div>
+</header>
+
+<!-- 01.5 NEW CASE BANNER -->
+<div class="wrap">
+  <div class="warn" style="margin:24px auto 0">
+    📌 新案例：<b>Catnip.AI × 北美市场 0→1 运营方案</b>（真实产品，对应真实岗位）—— 5 家竞品拆解 · 9 条可直接发布的英文内容 · 30 天排期 · 复盘框架 →
+    <a href="catnips-case.html" style="font-weight:700">查看案例</a>
+  </div>
+</div>
+
+<!-- 02 ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="kicker">02 / About</div>
+    <h2>关于我 × 岗位匹配</h2>
+    <p class="sub">非科班转行，靠"做出来、被验证"说话：机器人队国际赛冠军 → 5,000+ 导师数据库（付费产品核心）→ 千人黑客松入围奖 → 海外内容方向。</p>
+    <div class="grid2">
+      <div class="card">
+        <h3>PROFILE</h3>
+        <table>
+          <tr><td style="width:90px">位置</td><td>随时可到岗（可远程）</td></tr>
+          <tr><td>方向</td><td>海外内容运营 · 内容研究 · AI 快速产出</td></tr>
+          <tr><td>语言</td><td>英文工作语（全英文语料研究经历）</td></tr>
+          <tr><td>工具</td><td>Claude Code · ChatGPT · yt-dlp · Streamlit · Python · Canva</td></tr>
+          <tr><td>作品</td><td>GitHub 开源（LoomQ-2026）+ 个人作品集网站</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h3>岗位要求 → 我的证据</h3>
+        <table>
+          <tr><th>要求</th><th>证据</th></tr>
+          <tr><td>网感与审美</td><td>爆款结构研究 + 英文内容卡设计稿（下方）</td></tr>
+          <tr><td>执行速度</td><td>30 天内容日历 + AI 批量生产流水线方案</td></tr>
+          <tr><td>平台理解</td><td>YouTube Shorts 1,240 条样本的结构化拆解</td></tr>
+          <tr><td>数据意识</td><td>10,000 条标注数据验证分析工具（一致率 65.98%）</td></tr>
+          <tr><td>AI 工具</td><td>本作品集全程由 Claude Code 驱动产出</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 DEMO CASE OVERVIEW -->
+<section id="case">
+  <div class="wrap">
+    <div class="kicker">03 / Demo Case</div>
+    <h2>项目简介 × 产品理解</h2>
+    <p class="sub">示范案例（0→1 试运营方案）｜虚构品牌 <b>Sona — AI Self-care Companion</b>（AI 情感陪伴类 App，对标女性向/疗愈类产品赛道）</p>
+    <div class="grid2">
+      <div class="card">
+        <h3>DEMO CASE 基本信息</h3>
+        <table>
+          <tr><td>品类</td><td>Emotional Wellness / AI Companion</td></tr>
+          <tr><td>平台</td><td>Instagram + TikTok（Reels 优先）</td></tr>
+          <tr><td>市场</td><td>北美 20-35 岁女性用户</td></tr>
+          <tr><td>周期</td><td>30 天试运营（方案）</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h3>产品内容转译链</h3>
+        <table>
+          <tr><th style="width:70px">步骤</th><th>内容</th></tr>
+          <tr><td>FUNCTION</td><td>7×24 AI 倾听与回应情绪</td></tr>
+          <tr><td>BENEFIT</td><td>情绪被接住，夜晚不再一个人消化</td></tr>
+          <tr><td>SCENE</td><td>睡前复盘 / 通勤倾诉 / 情绪低谷</td></tr>
+          <tr><td>CONTENT</td><td>真实对话截图、睡前仪式、用户故事</td></tr>
+        </table>
+        <p class="tagline">一句话：把"AI 聊天"讲成"有一个永远在线的温柔回应"。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 AUDIENCE -->
+<section>
+  <div class="wrap">
+    <div class="kicker">04 / Audience</div>
+    <h2>目标用户 × 账号定位</h2>
+    <div class="grid3">
+      <div class="card">
+        <h3>核心用户画像</h3>
+        <p><span class="badge">20-35岁</span><span class="badge">北美</span><span class="badge">独居/异乡生活</span></p>
+        <p class="small">重视情绪价值；习惯在 IG/TikTok 消化"被理解"的内容；对 AI 好奇但不熟悉。</p>
+      </div>
+      <div class="card">
+        <h3>痛点 → 动机 → 偏好</h3>
+        <p>💬 深夜无人可说、怕打扰朋友<br>
+           🔥 想被回应而不被评判<br>
+           📱 偏好短而真实的对话片段、可收藏的 self-care 清单</p>
+      </div>
+      <div class="card">
+        <h3>账号定位</h3>
+        <p class="tagline">"一个把情绪讲得简单、温柔又有陪伴感的 AI 自护账号"</p>
+        <p class="small">品牌语气：温柔 · 清晰 · 精致 · 不过度承诺</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 ACCOUNT PLAN -->
+<section>
+  <div class="wrap">
+    <div class="kicker">05 / Account Plan</div>
+    <h2>账号规划 × 内容布局</h2>
+    <div class="grid3">
+      <div class="card"><h3>主页三件套</h3><p><b>BIO</b> 定位句 + 利益点 + CTA<br><b>HIGHLIGHTS</b> Real Chats / How to / FAQ / UGC<br><b>GRID</b> 对话卡、场景卡、清单卡交替</p></div>
+      <div class="card"><h3>视觉方向</h3><p><span class="pill" style="background:#F3E3DC"></span>奶油粉<br><span class="pill" style="background:#E8E2F0"></span>暮色紫<br><span class="pill" style="background:#EDF1EC"></span>雾灰绿<br><span class="small">水感 · 留白 · 手写体点缀</span></p></div>
+      <div class="card"><h3>内容栏目</h3><p>01 PRODUCT 功能与对话场景<br>02 ROUTINE 睡前/晨间仪式<br>03 COMMUNITY 互动问答与 UGC</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 GOALS & KPI -->
+<section>
+  <div class="wrap">
+    <div class="kicker">06 / Goals &amp; KPI</div>
+    <h2>运营目标 × KPI 漏斗</h2>
+    <p class="sub">冷启动阶段不只看粉丝数，更看内容能否让用户停留、互动和行动。</p>
+    <div class="kpi">
+      <div class="step"><div class="n">01</div>被看见<br><span class="small">REACH · 播放量</span></div>
+      <div class="step"><div class="n">02</div>愿意停留<br><span class="small">RETENTION · 完播率</span></div>
+      <div class="step"><div class="n">03</div>产生互动<br><span class="small">ENGAGEMENT · 赞评藏</span></div>
+      <div class="step"><div class="n">04</div>了解品牌<br><span class="small">PROFILE · 主页访问</span></div>
+      <div class="step"><div class="n">05</div>走向行动<br><span class="small">ACTION · 链接点击</span></div>
+    </div>
+    <p class="small" style="margin-top:18px">30 天验证重点：什么内容更容易停留？什么主题更愿意互动？什么形式更能带来主页访问？——这三点来自我的真实数据研究结论（见 09 数据能力）。</p>
+  </div>
+</section>
+
+<!-- 07 CONTENT STRATEGY -->
+<section>
+  <div class="wrap">
+    <div class="kicker">07 / Content Strategy</div>
+    <h2>内容策略 × 平台适配</h2>
+    <div class="grid2">
+      <div class="card">
+        <h3>内容支柱（40/30/20/10）</h3>
+        <table>
+          <tr><td><b>40%</b> 产品教育</td><td>对话实录 / 功能演示 / 使用方式</td></tr>
+          <tr><td><b>30%</b> 使用场景</td><td>睡前仪式 / Routine / Before-After</td></tr>
+          <tr><td><b>20%</b> 生活方式</td><td>Self-care / Mood / UGC</td></tr>
+          <tr><td><b>10%</b> 互动热点</td><td>问答 / 投票 / Trend</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h3>同一主题，不同表达</h3>
+        <table>
+          <tr><th>形式</th><th>结构</th></tr>
+          <tr><td>REELS</td><td>3 秒结果画面 + 快节奏对话片段</td></tr>
+          <tr><td>CAROUSEL</td><td>问题 → 原理 → 方法 + 收藏型信息</td></tr>
+          <tr><td>STORIES</td><td>投票 / 问答 / 倒计时 + 高频轻互动</td></tr>
+          <tr><td>FEED</td><td>质感界面图 + 利益点文案</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 30-DAY PLAN -->
+<section>
+  <div class="wrap">
+    <div class="kicker">08 / 30-Day Plan</div>
+    <h2>账号搭建 × 30 天计划</h2>
+    <div class="grid2">
+      <div class="card"><h3>W01 定位与搭建</h3><p>完成 Bio、栏目、模板；发布 3 条种子内容；确定视觉统一规范。</p></div>
+      <div class="card"><h3>W02 建立节奏</h3><p>测试 Demo / 教育 / 场景三类内容；每周 3-4 条 Feed/Reels + 每日 Stories。</p></div>
+      <div class="card"><h3>W03 放大反馈</h3><p>复用高互动主题；增加 Stories 投票；用真实数据校准选题（对标我的爆款结论：短标题+数字钩子）。</p></div>
+      <div class="card"><h3>W04 复盘迭代</h3><p>对比内容表现；确定下一轮测试变量（HOOK / FORMAT / TOPIC / CTA）。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 CONTENT WORKS -->
+<section>
+  <div class="wrap">
+    <div class="kicker">09 / Content Works</div>
+    <h2>图文内容作品（设计稿示例）</h2>
+    <p class="sub">英文内容卡 3 张（设计稿，非发布数据）：产品利益点、使用场景、互动话题。</p>
+    <div class="grid3">
+      <div class="igcard" style="background:#F3E3DC">
+        <span class="tagchip">CAROUSEL · P1</span><span class="ig">◎ IG</span>
+        <div class="img">🕯️</div>
+        <div class="cap"><span class="bold">Where the day ends,<br>someone listens.</span><br>
+        <span class="eng">Sona · your nightly debrief</span><br><br>
+        <span class="small">#selfcare #emotionalwellness #aifriend</span></div>
+      </div>
+      <div class="igcard" style="background:#E8E2F0">
+        <span class="tagchip">REELS · 0-3s</span><span class="ig">◎ IG</span>
+        <div class="img">💬</div>
+        <div class="cap"><span class="bold">"I had a rough day."</span><br>
+        <span class="eng">→ real chat, real comfort</span><br><br>
+        <span class="small">#aitherapy #mentalhealth #reels</span></div>
+      </div>
+      <div class="igcard" style="background:#EDF1EC">
+        <span class="tagchip">STORIES · POLL</span><span class="ig">◎ IG</span>
+        <div class="img">🌙</div>
+        <div class="cap"><span class="bold">Tonight's check-in:</span><br>
+        <span class="eng">anxious ○ calm ○ need a hug</span><br><br>
+        <span class="small">#moodcheck #selfcaresunday</span></div>
+      </div>
+    </div>
+    <div class="card" style="margin-top:22px">
+      <h3>15 秒 Reels 脚本结构</h3>
+      <table>
+        <tr><th style="width:70px">时间</th><th>画面</th><th>口播/字幕</th></tr>
+        <tr><td>0-3s</td><td>结果先出：深夜对话界面特写</td><td>"Makeup gone. Feelings heard."</td></tr>
+        <tr><td>3-8s</td><td>过程演示：输入情绪 → Sona 回应</td><td>字幕：how it feels to be answered</td></tr>
+        <tr><td>8-12s</td><td>利益点：Clean + Comforted</td><td>"Not therapy. Just company."</td></tr>
+        <tr><td>12-15s</td><td>行动引导</td><td>"Save your night routine ↓"</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 10 DATA WORKS (真实数据王牌) -->
+<section id="data">
+  <div class="wrap">
+    <div class="kicker">10 / Real Data Works</div>
+    <h2>数据能力：三个可复跑的真实研究</h2>
+    <p class="sub">所有数字可复跑验证，溯源底账见配套文档《03_复现记录》（含全部命令与日志路径）。</p>
+    <div class="grid3">
+      <div class="card">
+        <h3>📊 Shorts 爆款研究</h3>
+        <div class="num">1,240</div>
+        <p>条真实 YouTube Shorts（8 个 AI 赛道英文频道，yt-dlp 免登录采集）</p>
+        <table>
+          <tr><td>爆款标题长度</td><td><b>35.9</b> vs 46.8 字符</td></tr>
+          <tr><td>标题含数字占比</td><td><b>23.5%</b> vs 14.9%</td></tr>
+          <tr><td>爆款平均播放</td><td><b>142,599</b> vs 7,463</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h3>💗 情感分析验证</h3>
+        <div class="num">65.98%</div>
+        <p>与人工标注一致率（10,000 条真实推文，F1 = 0.655，0.05 ms/条）</p>
+        <table>
+          <tr><td>情绪分布(2,000条)</td><td>Happy 897 · Surprise 369 · Sad 312 · Fear 295 · Angry 127</td></tr>
+          <tr><td>标题情感</td><td>NEU 57.5% 为主（1,240条复跑）</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h3>🔭 竞品生态盘点</h3>
+        <div class="num">8</div>
+        <p>个高星开源项目对比（AI 陪伴/社媒工具赛道，GitHub API 检索）</p>
+        <table>
+          <tr><td>代表项目</td><td>SillyTavern ⭐35k · Postiz ⭐41k · AstrBot ⭐46k</td></tr>
+          <tr><td>结论</td><td>技术栈已开源化，壁垒在人设/内容/社群</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="grid2" style="margin-top:22px">
+      <div class="chart">
+        <img src="assets/viral_analysis.png" alt="viral analysis chart">
+        <div class="cap">图1：爆款 vs 非爆款指标对比（真实数据 · 可复跑）</div>
+      </div>
+      <div class="chart">
+        <img src="assets/distributions.png" alt="sentiment distribution chart">
+        <div class="cap">图2：情感/情绪分布（真实数据 · 可复跑）</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 ANALYSIS ITERATION -->
+<section>
+  <div class="wrap">
+    <div class="kicker">11 / Analysis &amp; Iteration</div>
+    <h2>分析迭代（示范框架）</h2>
+    <div class="warn">⚠️ 以下为<b>示例数据</b>（行业通行做法：用示例数据演示复盘框架）。待真实账号起号后，将替换为本人账号的实际数据——我的承诺：只放自己跑出来的数字。</div>
+    <div class="card" style="margin-top:18px">
+      <h3>8 POSTS · 可见互动概览（示例）</h3>
+      <table>
+        <tr><th>指标</th><th>示例值</th><th>下一步测试变量</th></tr>
+        <tr><td>平均点赞</td><td>52（示例）</td><td>HOOK：结果先出 vs 过程先出</td></tr>
+        <tr><td>平均评论</td><td>1.6（示例）</td><td>FORMAT：真人 Demo vs 界面静物</td></tr>
+        <tr><td>表现较强</td><td>Routine / 对话实录</td><td>TOPIC：睡前仪式 vs 功能教育</td></tr>
+        <tr><td>形式对比</td><td>Carousel 54 &gt; Static 64 &gt; Reels 25（示例）</td><td>CTA：评论提问 vs 收藏提醒</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 12 CONNECT -->
+<section>
+  <div class="wrap" style="text-align:center">
+    <div class="kicker">12 / Connect</div>
+    <h2>把网感、数据与执行力转化为真实业务结果</h2>
+    <p class="sub" style="margin:14px auto">完整数据底账与四份文档见同目录；期待与您聊聊内容与增长。</p>
+    <a class="btn" href="mailto:dingjieyuan@example.com">📮 联系我</a>
+    <a class="btn ghost" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">↑ 回到顶部</a>
+  </div>
+</section>
+
+<footer>
+  丁洁媛 · 海外社媒运营作品集 · 2026<br>
+  设计参考 StartBootstrap/freelancer（GitHub ⭐2,606 · MIT）· 页面为自包含实现 · 所有数据可复跑验证
+</footer>
+</body>
+</html>

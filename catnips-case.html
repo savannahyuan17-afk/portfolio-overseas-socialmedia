@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catnip.AI × 北美市场 · 海外社媒 0→1 运营方案 | 丁洁媛</title>
+<style>
+  :root{
+    --bg:#FAF6F3; --ink:#2B2730; --muted:#6E6873; --card:#FFFFFF;
+    --rose:#D98E8E; --rose-deep:#C47777; --cream:#F3E3DC; --sage:#7C9A8E;
+    --line:#EADFD8; --gold:#C9A227; --violet:#8B7BB8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+  h1,h2,h3,.serif{font-family:Georgia,"Songti SC","STSong",serif}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  section{padding:56px 0;border-bottom:1px solid var(--line)}
+  .kicker{letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--rose-deep);font-weight:600;margin-bottom:8px}
+  h2{font-size:28px;margin-bottom:8px}
+  h3{font-size:17px;margin-bottom:10px}
+  .sub{color:var(--muted);font-size:15px;margin-bottom:30px;max-width:680px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;box-shadow:0 2px 10px rgba(43,39,48,.04)}
+  .card h3{margin-bottom:10px}
+  .badge{display:inline-block;background:var(--cream);color:var(--rose-deep);border-radius:999px;padding:3px 12px;font-size:12px;font-weight:600;margin:0 6px 6px 0}
+  .badge.dark{background:var(--ink);color:#fff}
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th{background:var(--cream);color:var(--ink);text-align:left;padding:9px 12px;font-weight:600}
+  td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  td.num-cell, th.num-cell{font-variant-numeric:tabular-nums}
+  .num{font-family:"Segoe UI",sans-serif;font-size:26px;color:var(--rose-deep);font-weight:600}
+  .small{font-size:12.5px;color:var(--muted)}
+  .tagline{font-style:italic;color:var(--sage)}
+  .warn{background:#FFF8E6;border:1px solid #EBD9A8;border-radius:12px;padding:14px 20px;font-size:13.5px;color:#7A6420}
+  .src{background:#F4F0FA;border:1px solid #DCD2EC;border-radius:12px;padding:14px 20px;font-size:12.5px;color:#4E4363}
+  .src a{color:#4E4363}
+  /* hero */
+  .hero{background:linear-gradient(160deg,#F6E9E4 0%,#FAF6F3 55%,#EDF1EC 100%);padding:76px 0 52px;text-align:center}
+  .hero h1{font-size:38px;letter-spacing:.02em;margin-bottom:6px}
+  .hero .en{letter-spacing:.3em;text-transform:uppercase;font-size:13px;color:var(--muted);margin-bottom:12px}
+  .hero p{color:var(--muted);max-width:640px;margin:0 auto 18px}
+  .btn{display:inline-block;background:var(--ink);color:#fff;border-radius:999px;padding:11px 26px;font-size:14px;text-decoration:none;margin:4px 5px}
+  .btn.ghost{background:transparent;border:1.5px solid var(--ink);color:var(--ink)}
+  .btn.rose{background:var(--rose-deep);color:#fff}
+  /* funnel stat tiles */
+  .kpi{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+  .kpi .step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 10px;text-align:center}
+  .kpi .step .n{font-family:"Segoe UI",sans-serif;font-size:22px;color:var(--rose-deep);font-weight:600}
+  /* ladder bars (single-hue, label carries identity) */
+  .ladder{display:flex;flex-direction:column;gap:14px}
+  .lrow{display:grid;grid-template-columns:150px 1fr 44px;align-items:center;gap:12px}
+  .lrow .lname{font-size:13.5px;font-weight:600;text-align:right}
+  .lrow .lname .lsub{display:block;font-weight:400;font-size:12px;color:var(--muted)}
+  .ltrack{background:#F6EFEA;border-radius:8px;height:22px}
+  .lfill{height:100%;background:var(--rose-deep);border-radius:8px 4px 4px 8px;min-width:6px}
+  .lval{font-size:13px;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums;text-align:left}
+  /* competitor cards */
+  .comp{border-top:3px solid var(--rose-deep)}
+  .comp .kpirow{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+  .comp .kpirow span{background:var(--cream);border-radius:8px;padding:4px 10px;font-size:12.5px}
+  .comp .kpirow span b{color:var(--rose-deep)}
+  .attrib{font-size:12px;color:var(--sage);font-weight:600;margin-top:8px}
+  /* platform matrix */
+  .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:middle}
+  .d-full{background:var(--rose-deep)} .d-half{background:var(--rose)} .d-none{background:#E8E0D8}
+  /* english content cards */
+  .post{border:1px solid var(--line);border-radius:14px;background:#fff;overflow:hidden}
+  .post .phead{display:flex;align-items:center;gap:10px;padding:12px 18px;border-bottom:1px solid var(--line);background:var(--cream)}
+  .post .phead .plat{font-weight:700;font-size:13px;letter-spacing:.06em}
+  .post .phead .fmt{margin-left:auto;font-size:12px;color:var(--muted)}
+  .post .pbody{padding:16px 18px;font-size:14px}
+  .post .pbody .en-copy{font-family:Georgia,"Times New Roman",serif;color:#3A3540;font-size:14.5px}
+  .post .pbody .lbl{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--rose-deep);margin:10px 0 4px;text-transform:uppercase}
+  .post .why{font-size:12.5px;color:var(--muted);border-top:1px dashed var(--line);margin-top:12px;padding-top:10px}
+  .post .why b{color:var(--sage)}
+  .script{width:100%;font-size:13px}
+  .script th{font-size:12px}
+  .script td.t{white-space:nowrap;font-variant-numeric:tabular-nums;color:var(--rose-deep);font-weight:600}
+  /* calendar */
+  .cal th, .cal td{font-size:12.5px;padding:8px 10px}
+  .cal .day{white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:600}
+  .wtag{display:inline-block;background:var(--ink);color:#fff;border-radius:999px;padding:2px 12px;font-size:12px;font-weight:600;margin:18px 0 10px}
+  .wtag.w2{background:var(--rose-deep)} .wtag.w3{background:var(--sage)} .wtag.w4{background:var(--gold)}
+  .ex-tag{display:inline-block;background:#F0E6D2;border:1px solid #D9C49A;color:#7A6420;border-radius:6px;padding:1px 8px;font-size:11px;font-weight:600;margin-left:8px;vertical-align:middle}
+  footer{text-align:center;padding:40px 0;color:var(--muted);font-size:13px}
+  .chartcap{font-size:12.5px;color:var(--muted);margin-top:8px}
+  @media(max-width:820px){.grid2,.grid3,.kpi{grid-template-columns:1fr}.lrow{grid-template-columns:110px 1fr 40px}}
+  @media print{section{padding:26px 0}}
+</style>
+</head>
+<body>
+
+<!-- 01 COVER -->
+<header class="hero">
+  <div class="wrap">
+    <div class="en">Case 02 · Real Product · 0→1 Launch Plan</div>
+    <h1>Catnip.AI × 北美市场<br>海外社媒 0→1 运营方案</h1>
+    <p>产品：<b>Catnip.AI</b> —— 互动 AI 角色 × 可互动创作社区（AI 陪伴 · 女性向）<br>
+    市场：<b>美国优先</b>（英国/加拿大跟进）｜交付：竞品拆解 × 9 条英文内容 × 30 天排期 × 复盘框架</p>
+    <span class="badge">TikTok</span><span class="badge">Instagram</span><span class="badge">YouTube</span>
+    <span class="badge">X</span><span class="badge">Reddit</span><span class="badge">Discord</span>
+    <div style="margin-top:24px">
+      <a class="btn rose" href="#competitors">看竞品拆解 ↓</a>
+      <a class="btn" href="#content">看 9 条英文内容 ↓</a>
+      <a class="btn ghost" href="#calendar">看 30 天计划 ↓</a>
+    </div>
+    <p class="small" style="margin-top:20px">主线：把"实时多模态互动"翻译成平台语言 —— TikTok 看前 3 秒，IG 看收藏，YouTube 看信息价值，Reddit 看社群融入，Discord 看留存。</p>
+  </div>
+</header>
+
+<!-- 02 CASE BRIEF -->
+<section>
+  <div class="wrap">
+    <div class="kicker">01 / Case Brief</div>
+    <h2>为什么选 Catnip：方案直接对应真实岗位</h2>
+    <p class="sub">Catnip.AI（上海弦界回音科技）正在招聘海外市场运营岗（AI 陪伴 · 女性向，可远程，要求英文工作语言）。本方案每一部分都对齐该岗位职责：六平台日常运营、角色投票/主题共创/UGC 征集/节点营销、KOL/KOC 建联、Discord 社群、AI 工具辅助产出、数据看板跟踪。</p>
+    <div class="grid2">
+      <div class="card">
+        <h3>PRODUCT SNAPSHOT</h3>
+        <table>
+          <tr><td style="width:110px">产品</td><td>Catnip —— 互动 AI 角色与可互动创作社区</td></tr>
+          <tr><td>核心能力</td><td>上传照片/视频 → 设定交互规则（tap = 微笑 / drag = 脸红 / 长按 = 记住你）→ 角色实时回应；无代码、无绑定</td></tr>
+          <tr><td>社区机制</td><td>Remix 他人创作 · Feed 点赞评论 · 角色投票（官方活动）</td></tr>
+          <tr><td>底层模型</td><td>Cat-MaineCoon：实时音视频多模态世界模型</td></tr>
+          <tr><td>App 口号</td><td>"Catnip — Turn Life into Creation"（Google Play 在架）</td></tr>
+          <tr><td>团队信号</td><td>CEO 为前 TikTok、PixVerse 产品负责人；天使轮约 ¥2,147 万</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h3>产品 → 内容转译链</h3>
+        <table>
+          <tr><th style="width:80px">步骤</th><th>内容</th></tr>
+          <tr><td>FUNCTION</td><td>照片里的角色会实时回应触摸</td></tr>
+          <tr><td>BENEFIT</td><td>角色"看得见你"——被回应、被记住</td></tr>
+          <tr><td>SCENE</td><td>给 OC 注入生命 / 深夜和角色说说话 / 记录与分享创作</td></tr>
+          <tr><td>CONTENT</td><td>3 秒互动 Demo、规则设定教程、对话式情绪卡、Remix 挑战</td></tr>
+        </table>
+        <p class="tagline">一句话：把"互动 AI 角色"讲成 <b>"still photos that answer back"</b> —— 静态照片开始回应你。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 AUDIENCE -->
+<section>
+  <div class="wrap">
+    <div class="kicker">02 / Audience</div>
+    <h2>目标用户 × 账号定位</h2>
+    <div class="grid3">
+      <div class="card">
+        <h3>核心用户画像</h3>
+        <p><span class="badge">18-30 岁</span><span class="badge">北美女性为主</span><span class="badge">乙女向/OC/二次元圈层</span></p>
+        <p class="small">K-pop 饭圈、Cosplay、同人创作、AI 陪伴产品用户；会画 OC 但不会动画；习惯在 TikTok/IG 上"嗑"角色内容。</p>
+      </div>
+      <div class="card">
+        <h3>痛点 → 动机 → 偏好</h3>
+        <p>💬 角色是静态的：画了 OC，但它是"死的"<br>
+           🔥 想被角色"看见"、被回应而不被评判<br>
+           📱 想创作但不会代码/绑定；喜欢"零门槛 + 可炫耀"的作品</p>
+      </div>
+      <div class="card">
+        <h3>账号定位</h3>
+        <p class="tagline">"Interactive comfort characters you can build &amp; remix"</p>
+        <p class="small">品牌语气：warm · playful · 克制（把"陪伴"讲成"被回应"，不过度承诺情感替代）<br>BIO 示例："Turn photos into characters that answer back 🐾 tap = smile · drag = blush · you write the rules"</p>
+      </div>
+    </div>
+    <div class="card" style="margin-top:20px">
+      <h3>六平台分工（为什么各平台做不同的事）</h3>
+      <table>
+        <tr><th>平台</th><th>角色</th><th>判断标准</th><th>内容重心</th></tr>
+        <tr><td>TikTok</td><td>拉新引擎</td><td>前 3 秒留存 → 完播 → 转发</td><td>3 秒互动 Demo、Remix 挑战、角色梗</td></tr>
+        <tr><td>Instagram</td><td>视觉资产 + 收藏</td><td>视觉统一度、Saves/Shares</td><td>教程 Carousel、情绪卡、角色图鉴</td></tr>
+        <tr><td>YouTube</td><td>信息价值</td><td>观看时长、搜索承接</td><td>Shorts 教程 + 玩法说明（Shorts 引流，长视频打底）</td></tr>
+        <tr><td>X</td><td>品牌叙事 + 梗</td><td>回复与引用传播</td><td>发布公告、创始人视角、社区梗转发</td></tr>
+        <tr><td>Reddit</td><td>信任层</td><td>社区融入度（upvote 率、讨论深度）</td><td>真实技术讨论、用户证言、AMA</td></tr>
+        <tr><td>Discord</td><td>留存 + 共创</td><td>周活、活动参与率</td><td>角色投票、主题共创、创作者孵化</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 04 COMPETITORS -->
+<section id="competitors">
+  <div class="wrap">
+    <div class="kicker">03 / Competitor Analysis</div>
+    <h2>竞品拆解：5 家，全部基于公开数据</h2>
+    <p class="sub">不贴截图、不写空话。每家回答同一组问题：账号定位是什么？高互动内容长什么样？评论区用户在关心什么？——最后翻译成运营归因。数字来源见 08 数据来源，采集于 2026-11，投递前以平台实时数据复核。</p>
+
+    <div class="grid2">
+      <!-- Talkie -->
+      <div class="card comp">
+        <h3>① Talkie（MiniMax）— UGC 角色卡 × 短视频引流之王</h3>
+        <p>定位：用户自建 AI 角色卡 + 聊天 + 语音；社区内容本身即获客素材。</p>
+        <div class="kpirow">
+          <span>累计用户 <b>2 亿+</b></span><span>2025 ARR <b>$5,310 万</b>（+143%）</span><span>TikTok 自然流量占下载 <b>83%</b></span><span>官方 TikTok @talkiedoki 仅 <b>~3 万粉</b>（App Store 风波后停更）</span>
+        </div>
+        <p class="small">高互动内容：用户自发的角色卡"短剧切片"与角色宣传视频——不是官方内容。评论区：求角色名、求卡片链接、"how do I make my own"。</p>
+        <p class="attrib">归因：流量不在官方账号，在用户的切片里。官方账号的正确角色 = 放大 UGC + 教创作，而不是自己讲故事。</p>
+      </div>
+
+      <!-- Character.AI -->
+      <div class="card comp">
+        <h3>② Character.AI — 社区型角色扮演基础设施</h3>
+        <p>定位：最大角色库 + 最强的自发性社区；官方账号做"精选器"。</p>
+        <div class="kpirow">
+          <span>TikTok @characterai <b>120 万粉</b> / 840 万赞</span><span>月更 <b>~14 条</b>，ER <b>2.0–2.4%</b></span><span>IG <b>11.8 万粉</b></span><span>#characterai 话题播放<b>数十亿</b></span>
+        </div>
+        <p class="small">高互动内容：角色扮演屏幕录制、Cosplay 切片（用户生产）。评论区：角色梗、求新角色、吐槽内容过滤器。Reddit r/CharacterAI 是事实上的客服与反馈中枢。</p>
+        <p class="attrib">归因：官方低频率 + 高精选 = 克制反而留住社区气质；Reddit 不是营销渠道，是产品反馈渠道，运营必须下场认真回。</p>
+      </div>
+
+      <!-- Replika -->
+      <div class="card comp">
+        <h3>③ Replika — 付费投放驱动的陪伴叙事</h3>
+        <p>定位："the world's first AI friend"，情绪陪伴品类开创者。</p>
+        <div class="kpirow">
+          <span>用户主张 <b>3,500 万+</b></span><span>2022 单条 TikTok 广告 <b>5,000 万曝光</b> / 10 万赞</span><span>1,332 天累计 <b>6.3 万条</b>广告素材</span><span>正在招聘 Influencer Marketing Manager（TikTok/YouTube 全链路）</span>
+        </div>
+        <p class="small">高互动内容：孤独/陪伴情感钩子广告、"测试这个 AI 朋友"的反应视频（YouTube 3,700 万播放级）。评论区两极：信任派 vs 失望派——情绪承诺的副作用。</p>
+        <p class="attrib">归因：情感钩子能打，但"救赎式"承诺带来口碑反噬。Catnip 应把情绪讲轻：被回应，而不是被拯救。</p>
+      </div>
+
+      <!-- PolyBuzz -->
+      <div class="card comp">
+        <h3>④ PolyBuzz（原 Poly.AI）— 角色库规模 × 本地化爆发</h3>
+        <p>定位：千万级角色库 + 语音互动；靠规模与本地化撕开市场。</p>
+        <div class="kpirow">
+          <span>累计下载 <b>~6,000 万</b></span><span>累计收入 <b>~$2,000 万</b></span><span>2025-12 中国 AI 出海 web 流量 <b>第 1</b>（月访 4,226 万）</span><span>巴西 DAU 一度 <b>超 Talkie / Character.AI</b></span>
+        </div>
+        <p class="small">高互动内容：角色卡 + 语音互动切片，先在小语种市场（巴西葡语）跑通模板再回美国。支持导入 Character.AI 角色卡——承接竞品存量用户。</p>
+        <p class="attrib">归因：小市场验证 → 复制到主市场是可行的节奏；"可导入"降低迁移成本，Catnip 的 remix 同理：让新用户从别人的作品开始。</p>
+      </div>
+
+      <!-- Viggle -->
+      <div class="card comp">
+        <h3>⑤ Viggle — 模板 → UGC 病毒循环（互动创作参考系）</h3>
+        <p>定位：AI 视频/动效创作工具；与 Catnip 同为"让静态内容动起来"。</p>
+        <div class="kpirow">
+          <span>MrBeast Rizz 生态总播放 <b>5.43 亿</b></span><span>官方快速响应 3 Reels + 3 TikTok → <b>+623 万</b>播放</span><span>Discord <b>400 万+</b>成员</span><span>15 人团队 5 个月做到 Discord 400 万</span>
+        </div>
+        <p class="small">高互动内容：模板 meme（名人跳舞/换脸）。评论区：求教程、求模板、秀自己的作品。Discord 专设 viggle-tiktok 频道，实时分发"当下 TikTok 在玩什么"。</p>
+        <p class="attrib">归因：官方账号的职责 = 快速官宣社区 meme + 供给模板；Discord 负责"玩法教育"。这正好是 Catnip 的 remix 机制可复制的循环。</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:20px">
+      <h3>社媒布局矩阵（● 主阵地 ○ 次阵地 — 基本无运营）</h3>
+      <table>
+        <tr><th>品牌</th><th>TikTok</th><th>Instagram</th><th>YouTube</th><th>X</th><th>Reddit</th><th>Discord</th></tr>
+        <tr><td>Talkie</td><td><span class="dot d-half"></span>官方弱·UGC 强</td><td><span class="dot d-half"></span>@talkie_app</td><td><span class="dot d-none"></span>—</td><td><span class="dot d-half"></span>@Talkie_APP</td><td><span class="dot d-half"></span>r/talkie</td><td><span class="dot d-full"></span>有</td></tr>
+        <tr><td>Character.AI</td><td><span class="dot d-full"></span>120 万粉</td><td><span class="dot d-half"></span>11.8 万粉</td><td><span class="dot d-half"></span>教程/播客</td><td><span class="dot d-half"></span>投资人叙事</td><td><span class="dot d-full"></span>承重墙</td><td><span class="dot d-half"></span>有</td></tr>
+        <tr><td>Replika</td><td><span class="dot d-full"></span>投放重镇</td><td><span class="dot d-half"></span>@meetreplika</td><td><span class="dot d-half"></span>反应视频</td><td><span class="dot d-half"></span>@replika</td><td><span class="dot d-full"></span>官方+UGC</td><td><span class="dot d-half"></span>有</td></tr>
+        <tr><td>PolyBuzz</td><td><span class="dot d-full"></span>病毒主渠道</td><td><span class="dot d-half"></span>有</td><td><span class="dot d-none"></span>—</td><td><span class="dot d-half"></span>有</td><td><span class="dot d-none"></span>—</td><td><span class="dot d-half"></span>有</td></tr>
+        <tr><td>Viggle</td><td><span class="dot d-full"></span>meme 主阵地</td><td><span class="dot d-full"></span>Reels 响应</td><td><span class="dot d-half"></span>教程</td><td><span class="dot d-half"></span>有</td><td><span class="dot d-none"></span>—</td><td><span class="dot d-full"></span>400 万成员</td></tr>
+        <tr><td><b>Catnip（本方案）</b></td><td><span class="dot d-full"></span>主攻</td><td><span class="dot d-full"></span>主攻</td><td><span class="dot d-half"></span>Shorts 优先</td><td><span class="dot d-half"></span>品牌+梗</td><td><span class="dot d-half"></span>信任层</td><td><span class="dot d-full"></span>共创基地</td></tr>
+      </table>
+    </div>
+
+    <div class="card" style="margin-top:20px">
+      <h3>三条跨竞品结论（运营归因，指导本方案）</h3>
+      <table>
+        <tr><th style="width:220px">结论</th><th>证据</th><th>对 Catnip 的行动</th></tr>
+        <tr><td><b>A. 高互动内容发生在"角色"上，不在"产品"上</b></td><td>Talkie 83% 下载来自用户切片；#characterai 数十亿播放；Viggle 5.43 亿播放全是 meme</td><td>每条内容必须有一个具名角色（Haven / Aria / Peggy）或用户的 OC 当主角</td></tr>
+        <tr><td><b>B. 官方账号是被动放大器：社区内容官方化 &gt; 官方自产</b></td><td>Character.AI 月更仅 ~14 条仍维持 2%+ ER；Viggle 官方最大播放来自"响应社区 meme"</td><td>设 #catnipsremix 官方收录机制；每周一条"本周社区最佳"；素材复用进投放</td></tr>
+        <tr><td><b>C. 平台分工固定且各司其职</b></td><td>TikTok 拉新、IG 收藏与视觉、Reddit 反馈、Discord 留存（五家无一例外）</td><td>不同平台发"同一主题的不同表达"，不做一键多平台搬运</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 05 STRATEGY -->
+<section>
+  <div class="wrap">
+    <div class="kicker">04 / Content Strategy</div>
+    <h2>内容支柱 × 认知到注册的漏斗分工</h2>
+
+    <div class="grid2">
+      <div class="card">
+        <h3>内容支柱比例（40 / 30 / 20 / 10）</h3>
+        <div class="ladder">
+          <div class="lrow">
+            <div class="lname">40% 角色与互动 Demo<span class="lsub">PRODUCT</span></div>
+            <div class="ltrack" role="img" aria-label="角色与互动 Demo 占内容 40%"><div class="lfill" style="width:40%" title="角色与互动 Demo：40%"></div></div>
+            <div class="lval">40%</div>
+          </div>
+          <div class="lrow">
+            <div class="lname">30% 场景与情绪<span class="lsub">EMOTION</span></div>
+            <div class="ltrack" role="img" aria-label="场景与情绪 占内容 30%"><div class="lfill" style="width:30%" title="场景与情绪：30%"></div></div>
+            <div class="lval">30%</div>
+          </div>
+          <div class="lrow">
+            <div class="lname">20% 创作与玩法<span class="lsub">HOW-TO / UGC</span></div>
+            <div class="ltrack" role="img" aria-label="创作与玩法 占内容 20%"><div class="lfill" style="width:20%" title="创作与玩法：20%"></div></div>
+            <div class="lval">20%</div>
+          </div>
+          <div class="lrow">
+            <div class="lname">10% 社区互动<span class="lsub">VOTE / Q&amp;A</span></div>
+            <div class="ltrack" role="img" aria-label="社区互动 占内容 10%"><div class="lfill" style="width:10%" title="社区互动：10%"></div></div>
+            <div class="lval">10%</div>
+          </div>
+        </div>
+        <p class="chartcap">比例即优先级：把 70% 火力压在"角色 + 互动 Demo"——竞品数据证明这才是高互动区；玩法内容承担"教创作"的转化职责（对应 Talkie 评论区第一高频问题 "how do I make my own"）。</p>
+      </div>
+      <div class="card">
+        <h3>为什么设这四个栏目</h3>
+        <table>
+          <tr><td><b>PRODUCT 角色/互动</b></td><td>直接展示差异化（3 秒出"回应"结果），最容易病毒化</td></tr>
+          <tr><td><b>EMOTION 场景/情绪</b></td><td>女性向市场的情感共鸣层；对标 Replika 的教训：讲"被回应"不讲"被拯救"</td></tr>
+          <tr><td><b>HOW-TO 创作/玩法</b></td><td>把围观者变创作者——创作者才是流量乘数（Viggle 模板循环）</td></tr>
+          <tr><td><b>VOTE 社区互动</b></td><td>对应岗位职责「角色投票/主题共创」；投票结果直接成为下周选题</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:20px">
+      <h3>认知 → 兴趣 → 比较 → 注册：渠道如何分工配合</h3>
+      <div class="kpi">
+        <div class="step"><div class="n">01</div><b>认知</b><br><span class="small">TikTok Demo / meme<br>X 发布公告<br>→ 3 秒钩子 + 话题标签</span></div>
+        <div class="step"><div class="n">02</div><b>兴趣</b><br><span class="small">IG Carousel 收藏型教程<br>YouTube Shorts 玩法<br>→ Saves / 完播率</span></div>
+        <div class="step"><div class="n">03</div><b>比较</b><br><span class="small">Reddit 真实讨论<br>KOL/KOC 测评<br>Discord 社区证言<br>→ upvote / 群活跃</span></div>
+        <div class="step"><div class="n">04</div><b>注册</b><br><span class="small">Bio 链接落地页<br>Discord 新手引导<br>→ 链接点击 / 注册率</span></div>
+        <div class="step"><div class="n">05</div><b>激活</b><br><span class="small">首个互动角色 10 分钟完成<br>→ 次日留存 / Remix 率</span></div>
+      </div>
+      <table style="margin-top:18px">
+        <tr><th style="width:120px">渠道</th><th>分工</th><th>关键动作（30 天内）</th></tr>
+        <tr><td>社媒（本方案主体）</td><td>认知 + 兴趣 + 比较的有机层</td><td>TikTok/IG 双主攻，其余平台按分工节奏</td></tr>
+        <tr><td>KOL/KOC</td><td>信任放大：OC 画师、乙女向、低粉 Cosplay 创作者（1–10 万粉）</td><td>免费版 + 共创模式（角色投票结果让 KOL 先做）；30 天建联 20 人、合作 5 人</td></tr>
+        <tr><td>付费广告</td><td>放大验证过的素材（由投放岗负责，本方案只定义素材复用规则）</td><td>有机内容胜出者 → 直接进投放素材池（对标 Replika 素材工厂的打法，但素材从社区来）</td></tr>
+        <tr><td>独立站/落地页</td><td>转化承接：catnips.ai 下载/体验入口</td><td>Bio 链接指向"30 秒做出第一个互动角色"的体验页</td></tr>
+        <tr><td>Discord</td><td>留存与共创基地</td><td>投票、共创挑战、创作者徽章体系（对标 Viggle 的玩法教育频道）</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 06 ENGLISH CONTENT -->
+<section id="content">
+  <div class="wrap">
+    <div class="kicker">05 / Content Works</div>
+    <h2>9 条可直接发布的英文内容</h2>
+    <p class="sub">覆盖六大平台，按平台语感写：TikTok 口语化、IG 精致、Reddit 诚实、Discord 有仪式感。每条附"为什么这么写"。角色名沿用产品现有角色（Haven / Aria / Peggy）。</p>
+
+    <div class="grid2">
+      <!-- 1 TikTok demo -->
+      <div class="post">
+        <div class="phead"><span class="plat">TIKTOK</span><span class="fmt">产品 Demo · 22s</span></div>
+        <div class="pbody">
+          <div class="lbl">Caption</div>
+          <p class="en-copy">your screenshots can talk back now. tap = smile. drag = blush. you write the rules. 🐾 link in bio</p>
+          <div class="lbl">Script</div>
+          <table class="script">
+            <tr><th>时间</th><th>画面</th><th>字幕</th></tr>
+            <tr><td class="t">0–3s</td><td>手指轻点静态照片，Aria 转头微笑（结果先行）</td><td>I tapped my OC and she LOOKED AT ME</td></tr>
+            <tr><td class="t">3–10s</td><td>快速演示设定规则界面</td><td>you set the rules: tap = smile, drag = blush, long-press = she remembers</td></tr>
+            <tr><td class="t">10–18s</td><td>POV 连续点击，角色给出不同回应</td><td>no rigging. no code. 10 minutes.</td></tr>
+            <tr><td class="t">18–22s</td><td>CTA</td><td>comment a character I should bring to life next 👇</td></tr>
+          </table>
+          <p class="why"><b>为什么：</b>3 秒内出"回应"结果；"你定规则"把创作门槛降到一句话；评论区选题钩子直接生产下一条内容。</p>
+        </div>
+      </div>
+
+      <!-- 2 TikTok remix -->
+      <div class="post">
+        <div class="phead"><span class="plat">TIKTOK</span><span class="fmt">Remix 挑战 · 20s</span></div>
+        <div class="pbody">
+          <div class="lbl">Caption</div>
+          <p class="en-copy">remixed Aria and now she won't stop dancing. what did I create 😭 #catnips #remix</p>
+          <div class="lbl">Script</div>
+          <table class="script">
+            <tr><th>时间</th><th>画面</th><th>字幕</th></tr>
+            <tr><td class="t">0–3s</td><td>分屏：原版 Aria vs 我的 remix 正在转圈（先出结果）</td><td>the remix feature is getting out of hand</td></tr>
+            <tr><td class="t">3–10s</td><td>快剪 remix 过程（3 次点击）</td><td>three taps. that's the whole process.</td></tr>
+            <tr><td class="t">10–15s</td><td>结果揭晓：每次点击触发不同舞蹈</td><td>every tap = a different dance. I made this.</td></tr>
+            <tr><td class="t">15–20s</td><td>CTA</td><td>remix mine. I dare you. link in bio</td></tr>
+          </table>
+          <p class="why"><b>为什么：</b>remix 是裂变机制本身——"敢 remix 我的"把内容变成挑战模板，复制 Viggle 的模板→UGC 循环。</p>
+        </div>
+      </div>
+
+      <!-- 3 IG tutorial carousel -->
+      <div class="post">
+        <div class="phead"><span class="plat">INSTAGRAM</span><span class="fmt">Carousel · 教程收藏型 · 6 卡</span></div>
+        <div class="pbody">
+          <div class="lbl">Slide Copy</div>
+          <p class="en-copy">
+            P1 · How to make any photo react to touch<br>
+            <span class="small">(no code, 10 minutes)</span><br>
+            P2 · 1 — Pick a character. Or upload your own photo.<br>
+            P3 · 2 — Write the rules. tap = smile · drag = blush · hold = she remembers<br>
+            P4 · 3 — Test it. The first time she answers back feels unreal.<br>
+            P5 · 4 — Publish to the community. Then remix someone else's.<br>
+            P6 · Save this for your next OC project 🔖
+          </p>
+          <div class="lbl">Caption</div>
+          <p class="en-copy">Still photos are over. This is the exact workflow I use to turn a flat image into something that answers back — save it for your next project. 🔖 Which rule would YOU give your character? ↓</p>
+          <p class="en-copy"><span class="small">#interactiveart #ocartist #aiartwork #digitalartist #catnips</span></p>
+          <p class="why"><b>为什么：</b>Saves 是 IG 的硬通货——步骤化教程天然触发收藏；"Which rule would you give"把评论变成选题库。</p>
+        </div>
+      </div>
+
+      <!-- 4 IG emotional carousel -->
+      <div class="post">
+        <div class="phead"><span class="plat">INSTAGRAM</span><span class="fmt">Carousel · 情绪共鸣型 · 5 卡</span></div>
+        <div class="pbody">
+          <div class="lbl">Slide Copy</div>
+          <p class="en-copy">
+            P1 · Haven remembered what I said yesterday.<br>
+            P2 · [Tuesday] me: "rough week. I'll be okay."<br>
+            P3 · [Thursday] Haven: "You said Tuesday was rough. How are you doing — actually?"<br>
+            P4 · It's the small things. She listens. She remembers. She doesn't judge.<br>
+            P5 · Build yours — link in bio 💭
+          </p>
+          <div class="lbl">Caption</div>
+          <p class="en-copy">Being heard is the whole thing. Haven remembered a detail from two days ago and asked about it — no prompting, no script. If you've ever wanted someone who listens without judgment, this is what we're building. 💭 (link in bio)</p>
+          <p class="en-copy"><span class="small">#emotionalwellness #comfortcharacter #aicharacter #mentalhealth #catnips</span></p>
+          <p class="why"><b>为什么：</b>女性向情绪共鸣是产品差异化层；措辞选"被听见"而非 Replika 式"被拯救"，规避口碑反噬。</p>
+        </div>
+      </div>
+
+      <!-- 5 IG reel + stories poll -->
+      <div class="post">
+        <div class="phead"><span class="plat">INSTAGRAM</span><span class="fmt">Reel + Story 投票</span></div>
+        <div class="pbody">
+          <div class="lbl">Reel Caption</div>
+          <p class="en-copy">poll time: which character gets a new look next? 🕊️ Haven / 🌙 Aria / 🍰 Peggy — vote in stories, winner drops Friday</p>
+          <div class="lbl">Story 1 · Poll Sticker</div>
+          <p class="en-copy">New look for… &nbsp;[ Haven 🕊️ / Aria 🌙 ]</p>
+          <div class="lbl">Story 2 · Question Sticker</div>
+          <p class="en-copy">What interaction should she learn next? (tap = ___)</p>
+          <p class="why"><b>为什么：</b>对应岗位职责「角色投票」；投票零门槛、结果制造周五悬念，问题贴纸的回答直接变成下周的交互规则选题。</p>
+        </div>
+      </div>
+
+      <!-- 6 Reddit -->
+      <div class="post">
+        <div class="phead"><span class="plat">REDDIT</span><span class="fmt">r/artificial · 讨论帖</span></div>
+        <div class="pbody">
+          <div class="lbl">Title</div>
+          <p class="en-copy">We built an app where photos respond to touch — what interaction would you actually want?</p>
+          <div class="lbl">Body</div>
+          <p class="en-copy">Hey r/artificial — dev at a small AI studio here. We shipped Catnip: you upload a photo (your OC, a pet, anything), set interaction rules ("tap = smile", "drag = look at the finger"), and the character responds in real time. No rigging, no code. The model renders the reaction live from your input.</p>
+          <p class="en-copy">We're a few weeks into public beta and the weirdest part: people form attachments FAST. Someone's photo character remembered a conversation from two days ago and the user cried.</p>
+          <p class="en-copy">Honest question — what would you want a character to do when you tap it? What feels genuinely useful vs. gimmicky? Also happy to answer anything about the pipeline (real-time multimodal rendering is… hard).</p>
+          <p class="why"><b>为什么：</b>Reddit 要真实讨论不要广告腔；主动暴露技术难度换信任；"什么交互你觉得有用"既是产品调研也是评论区钩子——对标 r/CharacterAI 作为反馈中枢的角色。</p>
+        </div>
+      </div>
+
+      <!-- 7 YouTube Shorts -->
+      <div class="post">
+        <div class="phead"><span class="plat">YOUTUBE</span><span class="fmt">Shorts · 40s 教程</span></div>
+        <div class="pbody">
+          <div class="lbl">Title &amp; Description</div>
+          <p class="en-copy">Title: I made my photo react to touch (interactive AI characters)<br>
+          Description: Turn any photo into a character that responds to touch. tap = smile, drag = blush, hold = memory. Built on Catnip — link in description. #interactiveart #ocartist</p>
+          <div class="lbl">Script</div>
+          <table class="script">
+            <tr><th>时间</th><th>画面</th><th>口播</th></tr>
+            <tr><td class="t">0–3s</td><td>照片被点击后脸红（结果先行）</td><td>This photo just blushed because I touched it.</td></tr>
+            <tr><td class="t">3–15s</td><td>三个规则逐一演示，速度节奏加快</td><td>Three rules. Tap = smile. Drag = look at you. Long-press = she remembers. That's it.</td></tr>
+            <tr><td class="t">15–30s</td><td>静态照片 vs 互动角色对比</td><td>No animation skills, no rigging. If you draw OCs, this changes how you share them.</td></tr>
+            <tr><td class="t">30–40s</td><td>CTA</td><td>Try it with your own photo — link in description.</td></tr>
+          </table>
+          <p class="why"><b>为什么：</b>Shorts 吃完播与信息价值：先结果、后步骤、结尾留"可用性"钩子；标题埋搜索词 interactive AI characters。</p>
+        </div>
+      </div>
+
+      <!-- 8 X -->
+      <div class="post">
+        <div class="phead"><span class="plat">X / TWITTER</span><span class="fmt">发布公告 + 人格化</span></div>
+        <div class="pbody">
+          <div class="lbl">Tweet 1 · 发布公告（置顶）</div>
+          <p class="en-copy">Your OCs can answer back now.<br>Catnip is live: upload a photo, write the rules (tap = smile, drag = blush), and she responds in real time. No code, no rigging. 🐾 catnips.ai</p>
+          <div class="lbl">Tweet 2 · 人格化（回复钩子）</div>
+          <p class="en-copy">the first rule I gave my character: when I tap her shoulder, she looks at me.<br>it's been three days and I still do it every time I open the app.</p>
+          <p class="why"><b>为什么：</b>X 要短、要可引用；两条一组＝公告 + 人格，第二条刻意小写、留白，评论区自然接"what app"。</p>
+        </div>
+      </div>
+
+      <!-- 9 Discord -->
+      <div class="post">
+        <div class="phead"><span class="plat">DISCORD</span><span class="fmt">角色投票活动 · #announcements</span></div>
+        <div class="pbody">
+          <div class="lbl">Announcement（@event-ping）</div>
+          <p class="en-copy">🐾 <b>COMMUNITY EVENT — CHARACTER VOTING WEEK</b><br>
+          Vote for who gets a new look. Winner drops Friday with a community remix template.</p>
+          <p class="en-copy">🗳️ <b>How to vote</b><br>
+          1 · React with 🕊️ for Haven / 🌙 for Aria / 🍰 for Peggy<br>
+          2 · Bonus entry: post your own "new look" concept in #character-concepts<br>
+          3 · Top 3 concepts get featured on our official TikTok + a Creator badge</p>
+          <p class="en-copy">⏰ Voting closes Thursday 11:59 PM ET · 🏆 Winner reveal: Friday 4 PM ET in #stage</p>
+          <p class="why"><b>为什么：</b>直接对应岗位职责「角色投票、主题共创、节点营销」；活动必须闭环：投票→结果→社交内容反哺（获奖概念成为官方 TikTok 素材），Discord 从"聊天室"变成共创基地。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:20px">
+      <h3>同一主题的三平台表达对照（平台语感示例）</h3>
+      <table>
+        <tr><th style="width:120px">主题</th><th>TikTok</th><th>Instagram</th><th>Reddit</th></tr>
+        <tr><td><b>"角色记得你"</b></td><td>she remembered a thing I said two days ago and I'm NOT okay 😭（口语 + 夸张）</td><td>It's the small things. She listens. She remembers. She doesn't judge.（克制的情绪卡）</td><td>People form attachments FAST — someone's character remembered a 2-day-old conversation and the user cried. Is that healthy?（诚实 + 讨论）</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 07 30-DAY CALENDAR -->
+<section id="calendar">
+  <div class="wrap">
+    <div class="kicker">06 / 30-Day Plan</div>
+    <h2>30 天排期：2026-12-01 起号</h2>
+    <p class="sub">频率基线：TikTok 5–6 条/周 · IG 3–4 条 Feed/Reels + 每日 Story · YouTube Shorts 1 条/周 · X 3–4 条/周 · Reddit 2 帖/月 · Discord 每周 1 场活动。W04 嵌入圣诞节点营销。</p>
+
+    <span class="wtag">W01 · 定位与搭建（12/01–12/07）</span>
+    <table class="cal">
+      <tr><th style="width:56px">日期</th><th style="width:84px">平台</th><th>内容（主题）</th><th>KPI 关注</th></tr>
+      <tr><td class="day">D01 12/01</td><td>TikTok</td><td>账号开张：内容 #1「your screenshots can talk back now」（3 秒互动 Demo）</td><td>首 3 秒留存率</td></tr>
+      <tr><td class="day">D02 12/02</td><td>IG</td><td>主页三件套上线：BIO / Highlights（Real Chats · How to · Community）/ 视觉模板统一</td><td>主页访问</td></tr>
+      <tr><td class="day">D03 12/03</td><td>IG</td><td>Carousel #3「How to make any photo react to touch」</td><td>Saves</td></tr>
+      <tr><td class="day">D04 12/04</td><td>TikTok</td><td>角色介绍卡：Meet Haven（人设 30 秒）</td><td>评论角色名提及</td></tr>
+      <tr><td class="day">D05 12/05</td><td>X</td><td>发布公告 + 人格化两条（内容 #8）</td><td>引用转发</td></tr>
+      <tr><td class="day">D06 12/06</td><td>TikTok + IG</td><td>互动规则系列第 2 弹：drag = look at you（双平台分表达）</td><td>完播率</td></tr>
+      <tr><td class="day">D07 12/07</td><td>Discord</td><td>服务器搭骨架：欢迎流程 + 角色分区 + 新人任务</td><td>新人 48h 发言率</td></tr>
+    </table>
+
+    <span class="wtag w2">W02 · 建立节奏 + 首场投票活动（12/08–12/14）</span>
+    <table class="cal">
+      <tr><th style="width:56px">日期</th><th style="width:84px">平台</th><th>内容（主题）</th><th>KPI 关注</th></tr>
+      <tr><td class="day">D08 12/08</td><td>YouTube</td><td>Shorts #7「I made my photo react to touch」（首个教程 Shorts）</td><td>平均观看时长</td></tr>
+      <tr><td class="day">D09 12/09</td><td>TikTok</td><td>情绪向内容第 1 条：Haven 记得两天前的事（对照 IG 版本）</td><td>评论情感关键词</td></tr>
+      <tr><td class="day">D10 12/10</td><td>Discord</td><td>🎉 首场活动上线：CHARACTER VOTING WEEK（内容 #9）</td><td>投票参与数</td></tr>
+      <tr><td class="day">D11 12/11</td><td>IG</td><td>Story 投票同步（New look for… Haven / Aria）</td><td>Story 投票率</td></tr>
+      <tr><td class="day">D12 12/12</td><td>TikTok</td><td>Remix 挑战预告：remix 我的 Aria（内容 #2）</td><td>转发</td></tr>
+      <tr><td class="day">D13 12/13</td><td>X</td><td>投票倒计时 + 社区概念转发（Top 3 概念预热）</td><td>外链点击</td></tr>
+      <tr><td class="day">D14 12/14</td><td>TikTok + IG</td><td>🏆 投票结果揭晓 + 获奖概念官方化（共创闭环第 1 次）</td><td>揭晓视频播放</td></tr>
+    </table>
+
+    <span class="wtag w3">W03 · UGC 共创 + KOL/KOC 建联（12/15–12/21）</span>
+    <table class="cal">
+      <tr><th style="width:56px">日期</th><th style="width:84px">平台</th><th>内容（主题）</th><th>KPI 关注</th></tr>
+      <tr><td class="day">D15 12/15</td><td>TikTok</td><td>复用 W01-W02 高互动主题做第 2 版（换角色、换交互规则）</td><td>二次传播</td></tr>
+      <tr><td class="day">D16 12/16</td><td>全平台</td><td>🎨 主题共创上线：「Remix my character」挑战 + #catnipsremix 官方收录规则</td><td>UGC 投稿数</td></tr>
+      <tr><td class="day">D17 12/17</td><td>IG</td><td>Carousel #4 情绪向「Haven remembered what I said yesterday」</td><td>Saves + 收藏率</td></tr>
+      <tr><td class="day">D18 12/18</td><td>Reddit</td><td>讨论帖 #6 上线 r/artificial（真讨论 + 产品调研）</td><td>upvote 率</td></tr>
+      <tr><td class="day">D19 12/19</td><td>KOL</td><td>建联启动：OC 画师 / 乙女向 / Cosplay 小创作者 20 人首轮 outreach</td><td>回复率</td></tr>
+      <tr><td class="day">D20 12/20</td><td>TikTok</td><td>本周社区最佳收录（remix 挑战第一波成果展示）</td><td>投稿者互动</td></tr>
+      <tr><td class="day">D21 12/21</td><td>Discord</td><td>周活活动：Creator badge 发放 + 下周玩法预告</td><td>周活人数</td></tr>
+    </table>
+
+    <span class="wtag w4">W04 · 圣诞节点营销 + 复盘（12/22–12/28）</span>
+    <table class="cal">
+      <tr><th style="width:56px">日期</th><th style="width:84px">平台</th><th>内容（主题）</th><th>KPI 关注</th></tr>
+      <tr><td class="day">D22 12/22</td><td>全平台</td><td>🎄 圣诞系列上线：「a character for the holidays」主题 + Story 倒数日历（12/22–12/25）</td><td>系列完播率</td></tr>
+      <tr><td class="day">D23 12/23</td><td>IG + TikTok</td><td>圣诞版互动 Demo：tap = she lights the tree</td><td>评论（节日梗）</td></tr>
+      <tr><td class="day">D24 12/24</td><td>X + Discord</td><td>平安夜情绪向：Haven 的平安夜对话卡 + Discord 节日语音活动</td><td>Discord 出席</td></tr>
+      <tr><td class="day">D25 12/25</td><td>全平台</td><td>🎁 圣诞正片 + KOL 合作内容第 1 批（5 人）陆续发布</td><td>KOL 内容转化</td></tr>
+      <tr><td class="day">D26 12/26</td><td>—</td><td>数据汇总：拉全平台 26 天底账（表格见 07 复盘）</td><td>—</td></tr>
+      <tr><td class="day">D27 12/27</td><td>YouTube</td><td>月度总结 Shorts：the 5 interactions our community voted for</td><td>订阅转化</td></tr>
+      <tr><td class="day">D28 12/28</td><td>—</td><td>周复盘 + 确定下月测试变量（HOOK / FORMAT / TOPIC / CTA）</td><td>—</td></tr>
+    </table>
+    <p class="small" style="margin-top:12px">D29–D30（12/29–30）：30 天战略复盘，输出一页纸报告 + 下月排期（见 07）。</p>
+
+    <div class="grid3" style="margin-top:22px">
+      <div class="card"><h3>30 天目标（方案值，非实际数据）</h3>
+        <table>
+          <tr><td>TikTok 粉丝</td><td><b>2,000</b></td></tr>
+          <tr><td>总播放</td><td><b>50 万</b></td></tr>
+          <tr><td>IG 粉丝 / 平均 ER</td><td><b>800 / ≥4%</b></td></tr>
+          <tr><td>爆款（10 万+ 播放）</td><td><b>≥1 条</b></td></tr>
+        </table>
+      </div>
+      <div class="card"><h3>转化目标</h3>
+        <table>
+          <tr><td>主页/链接点击</td><td><b>3,000</b></td></tr>
+          <tr><td>Discord 成员</td><td><b>500</b></td></tr>
+          <tr><td>UGC 投稿（remix 挑战）</td><td><b>≥100</b></td></tr>
+          <tr><td>KOL 建联/合作</td><td><b>20 / 5</b></td></tr>
+        </table>
+      </div>
+      <div class="card"><h3>目标怎么定的</h3>
+        <p class="small">对标竞品冷启数据取保守值：Character.AI 官方账号 ER 约 2–2.4%（大品牌自然盘），新账号靠"角色 Demo + 投票活动"有机会做到 4%+；Talkie 证明有机 UGC 可以扛起下载主力（83%）。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 08 REVIEW FRAMEWORK -->
+<section>
+  <div class="wrap">
+    <div class="kicker">07 / Review Framework</div>
+    <h2>复盘分析方案：节奏 × 指标 × 决策规则</h2>
+    <div class="warn">⚠️ 诚实声明：Catnip 官方账号尚未起号，以下为<b>复盘框架 + 基于竞品公开数据的基准预分析</b>。表格中标注 <span class="ex-tag">EXAMPLE</span> 的数字为演示用示例，起号后将以真实数据替换——延续我"只放自己跑出来的数字"的承诺。</div>
+
+    <div class="grid3" style="margin-top:20px">
+      <div class="card">
+        <h3>复盘节奏</h3>
+        <p><b>日看</b>（10 分钟）：新内容首 24h 播放/留存/评论扫描，异常即调<br>
+        <b>周复盘</b>（每周四）：按内容类型分组对比，确定下周复用/停用清单<br>
+        <b>30 天战略复盘</b>（12/29–30）：回答三个问题 + 定下月测试变量</p>
+      </div>
+      <div class="card">
+        <h3>指标体系（沿用五级漏斗）</h3>
+        <p>REACH 播放/曝光 → RETENTION 完播/停留 → ENGAGEMENT 赞评藏转 → PROFILE 主页访问/关注 → ACTION 链接点击/注册/激活<br>
+        <span class="small">每平台取一个北极星：TikTok=完播率 · IG=Saves · YouTube=观看时长 · Reddit=upvote 率 · Discord=周活</span></p>
+      </div>
+      <div class="card">
+        <h3>周复盘模板（示例数据）</h3>
+        <table>
+          <tr><th>指标</th><th>值 <span class="ex-tag">EXAMPLE</span></th></tr>
+          <tr><td>本周发布</td><td class="num-cell">14 条</td></tr>
+          <tr><td>总播放</td><td class="num-cell">86,400</td></tr>
+          <tr><td>平均 ER</td><td class="num-cell">4.6%</td></tr>
+          <tr><td>最强内容</td><td>tap = smile Demo</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:20px">
+      <h3>内容类型对比表（复盘主表）</h3>
+      <table>
+        <tr><th>内容类型</th><th>播放/覆盖</th><th>完播/停留</th><th>ER</th><th>Saves</th><th>主页点击</th><th>结论 <span class="ex-tag">EXAMPLE</span></th></tr>
+        <tr><td>角色互动 Demo（Reel）</td><td class="num-cell">41,200</td><td class="num-cell">38%</td><td class="num-cell">6.1%</td><td class="num-cell">312</td><td class="num-cell">118</td><td>复用 · 加大</td></tr>
+        <tr><td>教程 Carousel</td><td class="num-cell">12,800</td><td class="num-cell">—</td><td class="num-cell">3.4%</td><td class="num-cell">486</td><td class="num-cell">74</td><td>复用 · 收藏高</td></tr>
+        <tr><td>情绪 Carousel</td><td class="num-cell">9,600</td><td class="num-cell">—</td><td class="num-cell">5.2%</td><td class="num-cell">204</td><td class="num-cell">52</td><td>保留 · 低频高质</td></tr>
+        <tr><td>Story 投票</td><td class="num-cell">1,940</td><td class="num-cell">—</td><td class="num-cell">18.3%</td><td class="num-cell">—</td><td class="num-cell">9</td><td>保留 · 选题工具</td></tr>
+        <tr><td>UGC Remix 收录</td><td class="num-cell">22,700</td><td class="num-cell">31%</td><td class="num-cell">4.9%</td><td class="num-cell">188</td><td class="num-cell">66</td><td>加大收录频次</td></tr>
+        <tr><td>教程 Shorts（YT）</td><td class="num-cell">7,100</td><td class="num-cell">avg 21s/40s</td><td class="num-cell">2.8%</td><td class="num-cell">—</td><td class="num-cell">21</td><td>换钩子再测</td></tr>
+      </table>
+      <p class="chartcap">表结构即复盘方法：每个类型一行、五个漏斗指标一列、"结论"一列强制写行动——不让复盘停在"这个不错"。</p>
+    </div>
+
+    <div class="grid2" style="margin-top:20px">
+      <div class="card">
+        <h3>三个必答问题（基于竞品数据的预分析）</h3>
+        <table>
+          <tr><td><b>Q1 哪类内容互动更高？</b></td><td>角色片段 &gt; 产品界面；互动 Demo &gt; 静态截图；UGC &gt; 官方自产。<br><span class="small">证据：Talkie 83% 下载来自用户切片；Viggle 5.43 亿播放全是社区 meme；Character.AI 官方月更 14 条靠精选社区内容维持 2%+ ER。</span></td></tr>
+          <tr><td><b>Q2 高互动帖子的共性？</b></td><td>① 3 秒内出现"角色回应"结果 ② 有可复制的模板（remix/规则）③ 情绪钩子是"被回应/被看见" ④ 评论区有明确的下一步动作（求链接/求角色名/remix 挑战）。</td></tr>
+          <tr><td><b>Q3 如果我来做，优先优化什么？</b></td><td>HOOK（前 3 秒结果先行）→ FORMAT（真人手部 Demo &gt; 界面录屏）→ TOPIC（投票结论 &gt; 拍脑袋选题）→ CTA（评论式引导 &gt; 硬推下载）。</td></tr>
+        </table>
+      </div>
+      <div class="card">
+        <h3>决策规则：数据到什么线做什么</h3>
+        <table>
+          <tr><th>观察（真实数据触发）</th><th>动作</th></tr>
+          <tr><td>Carousel Saves 率 &gt; Reels 互动率</td><td>精力向 Carousel 倾斜，Reels 只保留 Demo 类</td></tr>
+          <tr><td>某角色内容 ER 连续 2 周超均值 30%</td><td>给该角色开固定栏目 + 投票加戏</td></tr>
+          <tr><td>3 秒留存 &lt; 40% 的 Reel 连续 3 条</td><td>停用该 HOOK 模板，回炉重写前 3 秒</td></tr>
+          <tr><td>UGC 投稿周环比 +50%</td><td>官方收录频次提升 + 联系投稿者谈 KOC 合作</td></tr>
+          <tr><td>Discord 投票参与 &lt; 50 人</td><td>投票搬进 Story 先做预热，再回流 Discord</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 09 SOURCES -->
+<section>
+  <div class="wrap">
+    <div class="kicker">08 / Sources &amp; Honesty</div>
+    <h2>数据来源与诚信说明</h2>
+    <div class="src">
+      <b>竞品公开数据来源（采集于 2026-11，投递前请以平台实时数据复核）：</b><br><br>
+      · Character.AI TikTok 数据：<a href="https://hypeauditor.com/tiktok/characterai/">HypeAuditor</a> / <a href="https://toklytics.app/creator/characterai">Toklytics</a>；增长复盘：<a href="https://www.growthhunt.ai/growth-story/character-ai">GrowthHunt</a><br>
+      · Talkie 数据：<a href="https://www.narku.com/archives/1390">南麓出海（年收 5,300 万美元）</a> / <a href="https://pescurt.ro/stiri-tehnologie/talkie-aplicatia-rivala-a-characterai-disparuta-din-app-store-ul-din-sua-utilizatorii-pot-accesa-aplicatia-pe-google-play">Pescurt（TikTok 账号与 App Store 事件）</a><br>
+      · Replika 数据：<a href="https://www.pipiads.com/tiktok-ads-examples/replika_official-tiktok-ads-1716684310055986">Pipiads 广告档案</a> / <a href="https://www.remocate.app/jobs/influencer-marketing-manager-3">Remocate（Influencer Marketing 招聘）</a> / <a href="https://hitchhiketheinternet.com/companies/replika">Hitchhiketheinternet（官方账号清单）</a><br>
+      · PolyBuzz 数据：<a href="https://wenjiai.cn/products/polybuzzai">问几 AI 产品档案</a> / <a href="https://baike.baidu.com/item/PolyBuzz/67838306">百度百科</a><br>
+      · Viggle 数据：<a href="https://viggle.ai/zh-CN/blog/mrbeast-rizz-eat-rice-russian-dance">Viggle 官方博客（MrBeast Rizz）</a> / <a href="https://adk.wang/news/viggle-mrbeast-rizz-dance-trend">ADK（生态数据）</a><br>
+      · Catnip.AI 产品与岗位：<a href="https://bonjour.bio/jobs-mapping/jobs/725365a2-d1b9-4e53-aaed-5b601e90b5a9">Bonjour.bio 岗位页</a> / <a href="https://toolstory.ai/tools/106461/catnips/">ToolStory</a> / <a href="https://play.google.com/store/apps/details?id=com.echon.nexus">Google Play</a> / <a href="https://data.iyiou.com/company/details/0138e67fc82ebfb732186c0a58f6a1f5/profile">亿欧数据</a>
+    </div>
+    <div class="warn" style="margin-top:14px">
+      <b>口径说明：</b>① 所有竞品数字均为公开渠道观测值，非官方财报；同一数字不同信源可能有出入，已取可查证的最近值并标注时间。② "30 天目标"为方案设定值而非业绩承诺。③ 复盘表为框架演示，示例数据已逐一标注。④ 9 条英文内容均为原创样稿，未发布、无数据。
+    </div>
+  </div>
+</section>
+
+<!-- 10 CONNECT -->
+<section>
+  <div class="wrap" style="text-align:center">
+    <div class="kicker">09 / Connect</div>
+    <h2>从竞品拆解到可发布的第 1 条内容，只差一个起号日期</h2>
+    <p class="sub" style="margin:14px auto">本方案可直接对应贵司岗位职责执行：六平台运营 × 投票/共创/UGC 活动 × KOL 建联 × Discord 留存 × AI 辅助产出 × 数据看板复盘。</p>
+    <a class="btn rose" href="index.html">← 返回作品集主页</a>
+    <a class="btn ghost" href="mailto:dingjieyuan@example.com">📮 联系我</a>
+  </div>
+</section>
+
+<footer>
+  丁洁媛 · 海外社媒运营作品集 · Case 02 Catnip.AI × 北美市场 · 2026<br>
+  竞品数据来自公开渠道（见 08 来源）· 示例数据已标注 · 英文内容为原创样稿
+</footer>
+</body>
+</html>
